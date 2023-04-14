@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>Document</title>
+</head>
+<body>
+    <p style="font:normal 20px Times; text-align: justify;"> Тег Area определяет активные области изображения, 
+        которые являются ссылками. Рисунок с привязанными к нему активными областями называется 
+        картой-изображением. Такая карта по внешнему виду ничем не отличается от обычного 
+        изображения, но при этом оно может быть разбито на невидимые зоны разной формы, где каждая из
+        областей служит ссылкой. Этот тег всегда располагается в контейнере map, который связывает координаты областей с изображением.</p>
+    <p style="font:normal 20px Times; text-align: justify;">Атрибутами тега "area" мы указываем как координаты области (атрибут coords), так и тип необходимой нам фигуры (атрибут shape):
+<ul style="font:normal 20px Times">
+    <li> default: весь регион</li>
+<li> rect: прямоугольная область (x1,y1,x2,y2)</li>
+<li> circle: круглая область (x,y,r- радиус)</li>
+<li> poly: многоугольную область (x1,y1,x2,y2,...,xn,yn)</li>
+</ul>
+</p>
+<hr>
+        <p style="font:normal 26px Times">Выбери иконку:</p>
+                <img src = "map.png" usemap = "#services" alt = "Доступны 4 услуги на выбор" >
+                <map name = "services" >
+                    <area shape = "rect" coords = "28,32,161,171" href ="https://www.103.by/cat/medcentry/laboratorii/" alt = "Анализы в Минске" >
+                    <area shape = "circle" coords = "291,118,80" href = "https://www.coral.by/" alt = "Путешествия" >
+                    <area shape = "rect" coords = "424,32,614,180" href = "https://teleport.by/" alt = "Парк виртуальной реальности" >
+                    <area shape = "rect" coords = "646,32,810,200"  href = "https://oz.by/books/" alt = "Книги OZ.by" >
+                </map>
+            </body>
+
+    </body>
+</html>
