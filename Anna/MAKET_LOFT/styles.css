@@ -9,10 +9,12 @@
     div.container ul li{font:normal 14px Roboto; color:white; float:left;
     padding-top: 10px; padding-bottom: 12px; margin-right: 30px;}
 
-    .container div{float:right;}
+    div.container::after{content:""; display:block; clear:both;}
+    .container div{float:right;font:normal 14px Roboto; color:white;}
+    
+    .container div img[src^='phone']{padding-bottom: 10px; padding-top: 11px; padding-right: 11px;}
+    .container div a[href^='http']{font:normal 14px Roboto; color:white;}
+    .container div img[src^='delivery']{padding-bottom: 10px; padding-top: 11px; padding-right: 11px;}
 
-    img[src^="phone"]{padding-bottom: 11px; padding-top: 10px;margin-left: 11px;}
-    img[src^="delivery"]{padding-bottom: 11px; padding-top: 10,42px;margin-left: 10,62px;}
-    a[href^="http://"]{margin-left: 11px; padding-bottom: 12px; padding-top: 10px}
     
    
