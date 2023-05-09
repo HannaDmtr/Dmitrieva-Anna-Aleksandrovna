@@ -8,13 +8,27 @@
     
     div.container ul li{font:normal 14px Roboto; color:white; float:left;
     padding-top: 10px; padding-bottom: 12px; margin-right: 30px;}
+   
+    .first{float:right;font:normal 14px Roboto; color:white; padding-top: 10px;}
+    .first a{padding-left:11px; font:normal 14px Roboto; color:white; vertical-align: 5px;}
+    img[src^="img/delivery"]{padding-right: 10px;padding-left: 10px;}
+    .first span{vertical-align: 5px;}
 
-    div.container::after{content:""; display:block; clear:both;}
-    .container div{float:right;font:normal 14px Roboto; color:white;}
-    
-    .container div img[src^='phone']{padding-bottom: 10px; padding-top: 11px; padding-right: 11px;}
-    .container div a[href^='http']{font:normal 14px Roboto; color:white;}
-    .container div img[src^='delivery']{padding-bottom: 10px; padding-top: 11px; padding-right: 11px;}
+    img[src^="img/LOGO"]{padding-top:10px;margin-right: 10px;}
+    .second{float:left; margin-top: 40px;}
+    .second ul{float:right;margin-top: 5px; margin-left:15px;}
+    .second div{width:839px; height:50px; margin-left:10px;float:right; border:solid 1px black;}
+    img[src^="img/search"]{padding: 14px 10px 0px 10px}
 
-    
+   .third{margin-left:30px;float:none; padding-top: 160px;}
+   .third ul#menu li{padding: 15px 0px 10px 8px; font: normal 17px Roboto; color: black;}
+   .third ul#menu li:not(:last-child){margin-right: 40px;}
+   .third ul#menu li img{padding-right:6px; vertical-align: middle;}
+   .fourth h1{font:normal 50px Playfair Display; color:#313131;}
+   .fourth h2{font:normal 16px Roboto Condensed; color:#343434;}
+   .fourth{background: url('img/1785\ 1.jpg'); height:450px; margin-top: 100px;}
+   .fourth div.button{height:45px; width:163px; background-color: white;font:normal 12px Roboto Condensed; font-weight:700; color:#414141;
+    ;}
+   
+   
    
