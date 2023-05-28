@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 10000px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- https://fe.it-academy.by/TestForm.php?firstname=sdsdsd&lastname=gdfdfd -->
+    <form action="https://fe.it-academy.by/TestForm.php" method="GET" enctype="multipart/form-data">
+        <fieldset>
+            <legend>hello</legend>
+            <label for="test">
+                focus textarea  
+            </label>
+            
+
+            <label>
+                firstname 
+                <input type="text" readonly value="test" maxlength="20" name="firstname"><br>
+            </label>
+             <br>
+            <input type="text" placeholder="test"  name="lastname">  <br>
+            <input type="password" autofocus placeholder="pass"  name="pass">  <br>
+    
+            <hr>
+    
+            <input type="checkbox" name="item[]" value="one">
+            <input type="checkbox"  name="item[]" checked  value="two">
+            <input type="checkbox"  name="item[]" checked  value="three">
+            
+            <hr>
+    
+            <input type="radio" name="radio" value="one">
+            <input type="radio"  name="radio" value="two">
+            <input type="radio"  name="radio" checked  value="three">
+            <input type="hidden" name="type" value="form1">
+    
+            <hr>
+
+            <input type="file" name="file">
+
+            <hr>
+
+            <textarea id="test" placeholder="test" name="textarea" cols="30" rows="10">hello world</textarea>
+    
+            <hr>
+            <select name="city[]" size="5" multiple>
+                <optgroup label="Minsk region">
+                    <option value="1">Minsk</option>
+                    <option value="2" selected>Brest</option>
+                    <option value="3">Gomel</option>
+                </optgroup>
+                
+                <optgroup label="Brest region">
+                    <option value="4">Minsk</option>
+                    <option value="5">Brest</option>
+                    <option value="6">Gomel</option>
+                </optgroup> 
+
+                <optgroup label="Gomel region">
+                    <option value="7">Minsk</option>
+                    <option value="8">Brest</option>
+                    <option value="9">Gomel</option>
+                </optgroup>
+            </select>
+            <hr>
+            <input type="submit" value="send">
+        </fieldset>
+    </form>
+    <br><br>
+    <!-- <form action="https://fe.it-academy.by/TestForm.php" method="GET">
+        <fieldset>
+            <input type="radio" name="radio" value="one">
+            <input type="radio"  name="radio" value="two">
+            <input type="radio"  name="radio" checked  value="three">
+            <input type="hidden" name="type" value="form2">
+    
+            <input type="submit" value="send">
+        </fieldset>
+    </form> -->
+
+</body>
+</html>

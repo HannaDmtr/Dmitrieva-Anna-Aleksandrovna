@@ -33,6 +33,7 @@
     .button p{text-align: center; padding-top: 14px;}
     div.catalog h3{font:normal 16px Roboto; color:#414141; margin-top: 20px; margin-left: 15px;}
     div.catalog ul{margin-top: 109px;}
-    div.catalog ul li:first-child{margin-top:54px;font:normal 16px Roboto; color:#414141; font-weight: 500; text-align: left;}
-    div.catalog ul li h3{font:normal 11px Roboto; color:#414141;}
+    div.catalog ul li:first-child{margin-top:30px;font:normal 16px Roboto; color:#414141; font-weight: 400; text-align: left;}
+    div.catalog ul li h3{font:normal 16px Roboto; color:#414141;font-weight: 500; }
+    img[src^="img/image 2.png"]{margin-top:-30px; margin-left:20px}
    
