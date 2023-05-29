@@ -3,14 +3,12 @@ margin:0px;
 box-sizing: border-box;}
 
 .left{position:fixed; 
-    width:90px; 
+    width:80px; 
     height:100vh;
     top:0px;
     left:0px;   
-    border-right: solid 1px white;
-    padding-left:20px; padding-top:10px}
-    .left img[src^='img/icon/Rectangle']{height:4px;}
-.header{background: url('img/main.image.jpg'); height: 100vh;}
+    border-right: solid 1px white;}
+ .header{background: url('img/main.image.jpg'); height: 100vh;}
 .container{margin-left: auto; margin-right: auto;
     width:1620px}
 .log{display: flex; justify-content: space-between;}
@@ -26,4 +24,5 @@ box-sizing: border-box;}
 .button{margin:20px;width:294px; height:59px; display: inline-block; background-color: white; border-radius: 10px; font: bold 16px Roboto; color:black;
 padding:20px 0px 20px 30px}
 .button img[src^='img/icon/Vector 70']{padding-left: 30px;vertical-align: -2px;}
+.zagl h1{font:normal 64px Roboto; font-weight:700px; color:white; margin-top: 309px;}
 
