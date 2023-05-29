@@ -1,0 +1,42 @@
+@media all and (max-width: 720px){
+
+.head{background-color:darkslategrey; 
+    width:100%;
+    padding: 15px; 
+    text-align: center; 
+    font:normal 20px Arial; color:aliceblue; 
+    margin-right:20px;}
+
+.main{
+    background: url(../ball12.png) no-repeat 7% 89%; 
+    background-color:grey; 
+    margin-top: -17px;
+    padding-bottom: 10px;
+    clear: both;}
+
+.menu{font:normal 18px Arial;}
+   
+.headline {font:bold 16px Arial;
+    text-align: center;
+    padding-left: 10px;}
+
+[href^="https://"]{color:rgb(181, 202, 143); font:bold 16px Arial;}
+
+   
+.content {text-align: justify;
+    margin-left: 210px;
+    font:normal 14px Arial;}
+    
+img[src^="foot"]{width: 220px;
+    margin: 0px 10px 10px 0px;
+    float:left;}
+
+.text{padding-left: 0px; color:aliceblue;
+    padding-right: 10px;}
+
+.footer{background-color: darkslategrey; 
+    width:100%;
+    padding: 15px; text-align: center; 
+    font:normal 20px Arial; color:aliceblue; 
+    clear:both;}
+}

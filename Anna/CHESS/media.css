@@ -1,0 +1,4 @@
+@media print{
+        a[href^=https]::before {content:"ссылка ";}
+        a[href^=https]::after {content:"["attr(href)"]";}
+}
