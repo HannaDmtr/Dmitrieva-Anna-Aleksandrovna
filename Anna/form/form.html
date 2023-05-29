@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+<form method="GET">
+    <fieldset>
+        <legend>Данные:</legend>
+        Фамилия: <input type="text" name="Lastname"> <input type="submit" value="Отправить"> <br><br>
+
+        Страна: <br>
+        <select name="country" size="5"  multiple>
+            <option value="1">Республика Беларусь</option>
+            <option value="2">Латвия</option>
+            <option value="3">Литва</option>
+            <option value="4">Польша</option>
+            <option value="5">Украина</option>
+        </select><br><br>
+
+        <textarea name="description">О себе...</textarea><br>
+        <input type="submit" value="Отправить"><br><br>
+
+        Выберите пол:<br>
+        <input type="radio" name="answer" value="1">Женский
+        <input type="radio" name="answer" value="2">Мужской
+        <input type="submit" value="Отправить"><br><br>
+
+        Наличие визы:<input type="checkbox" name="visa"><br>
+        <input type="submit" value="Отправить">
+
+    </fieldset>
+</form>
+    
+</body>
+</html>
