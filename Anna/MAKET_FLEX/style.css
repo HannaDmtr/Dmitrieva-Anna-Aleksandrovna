@@ -3,14 +3,18 @@ margin:0px;
 box-sizing: border-box;}
 
 .left{position:fixed; 
-    width:50px; 
+    width:90px; 
     height:100vh;
     top:0px;
-    left:0px}
+    left:0px;   
+    border-right: solid 1px white;
+    padding-left:20px; padding-top:10px}
+    .left img[src^='img/icon/Rectangle']{height:4px;}
 .header{background: url('img/main.image.jpg'); height: 100vh;}
 .container{margin-left: auto; margin-right: auto;
     width:1620px}
-.log{display: flex; justify-content: space-between; }
+.log{display: flex; justify-content: space-between;}
+.first{padding-right: 120px;}
 .first h3{font:bold 39px Roboto; font-weight:700px; color:white;padding-top: 30px;}
 .first p{margin-left:270px; margin-top:-40px;font:normal 14px Roboto; font-weight:400px;line-height:16.1px; color:white}
 .lang{margin-top:40px}
@@ -19,5 +23,7 @@ box-sizing: border-box;}
 .second p{font:normal 16px Roboto; font-weight:400px; color:white;line-height:24.8px;padding-top: 5px;}
 .third h3{margin-top:20px;font:normal 28px Roboto; font-weight:700px;line-height:36.4px; color:white;}
 .third p{font:normal 16px Roboto; font-weight:400px; color:white;line-height:24.8px;padding-top: 5px;}
-.button{margin:20px;width:294px; height:59px; display: inline-block; background-color: white; border-radius: 10px;
+.button{margin:20px;width:294px; height:59px; display: inline-block; background-color: white; border-radius: 10px; font: bold 16px Roboto; color:black;
 padding:20px 0px 20px 30px}
+.button img[src^='img/icon/Vector 70']{padding-left: 30px;vertical-align: -2px;}
+
