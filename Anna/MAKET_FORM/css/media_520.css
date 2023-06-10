@@ -1,0 +1,19 @@
+@media all and (max-width: 520px){
+
+    .name input::before{
+        clear: both;}
+    .name input{
+        margin-left:0px;margin-top:5px; width:400px}
+    select{
+        margin-left:0px; margin-top:5px;width:400px}
+    select::before{
+        clear: both;}
+    .public{
+        float:none;margin-bottom:5px;}
+    ul li{
+        display:inline-block;
+        list-style-type: none;
+        margin-right:60%;}
+    textarea{
+        width:80%}
+        }

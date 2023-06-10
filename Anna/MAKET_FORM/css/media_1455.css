@@ -1,0 +1,9 @@
+@media all and (max-width: 1455px){
+   
+.name input{
+    margin-left:8px;width:70%}
+select{
+    width:70%;margin-left: 70px;}
+textarea{
+    width:80%}
+}

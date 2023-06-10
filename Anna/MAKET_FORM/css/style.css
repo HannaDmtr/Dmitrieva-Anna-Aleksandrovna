@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+fieldset{
+    margin:20px}
+
+.name input{
+    margin-left:8px;width:90%}
+
+select{
+    width:90%;margin-left: 70px;}
+
+.public{
+    float: left;}
+
+ul li{
+    margin-left: 5px;}
+li {
+    display:inline;
+    list-style-type: none;}
+
+ textarea{
+    width:90%}
