@@ -14,7 +14,7 @@
     img[src^="img/delivery"]{padding-right: 10px;padding-left: 10px;}
     .first span{vertical-align: 5px;}
 
-<<<<<<< HEAD
+
     div.container::after{content:""; display:block; clear:both;}
     .container div{width:375px;float:right;font:normal 14px Roboto; color:white;}
     
@@ -37,7 +37,7 @@
     
 
    
-=======
+
     img[src^="img/LOGO"]{padding-top:10px;margin-right: 10px;}
     .second{float:left; margin-top: 40px;}
     .second ul{float:right;margin-top: 5px; margin-left:15px;}
@@ -61,4 +61,4 @@
     div.catalog ul li h3{font:normal 16px Roboto; color:#414141;font-weight: 500; }
     img[src^="img/image 2.png"]{margin-top:-30px; margin-left:20px}
    
->>>>>>> 00c4e3c93fcf3b90fdb84bfd82e0fd6cd210048e
+

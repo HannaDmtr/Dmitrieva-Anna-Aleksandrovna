@@ -1,0 +1,34 @@
+*{padding:0px;
+    margin:0px;
+    box-sizing: border-box;}
+
+.header{background: url('img/gradient.png') no-repeat, url('img/bg_photo.png') no-repeat;overflow: scroll;  height: 100vh;}
+
+.container{margin-left: auto; 
+    margin-right: auto;
+    width:1920px}
+
+.menu{margin-left:60px; display:flex;}
+.menu .logo {width:411px;display:flex; justify-content: space-between;} 
+.menu .logo div img[src*='Vector']{position:relative;margin-top:43px;}
+.menu .logo div img[src*='Union']{position:relative;height:23.5px;left:50px; top:-32px}
+.menu .logo div.Kazan{margin-top: 51px;margin-left:90px; font:normal 18px Montserrat; font-weight:600px; color:white}
+.Kazan img[src*='vector1']{position:relative; margin-top:3px;}
+.Kazan a{position:relative; left:18px; top:-23px;}
+.Kazan img[src*='vector2']{position:relative; left:90px; top:-48px;}
+.ctlg{margin-top:46px; margin-left:62px;}
+.ctlg button{width:136px; height:40px; 
+    background-color:transparent;
+    font:normal 18px Montserrat; font-weight:600px; color:white;
+    border-color: white;border-radius: 200px;}
+.questions{margin-left:330px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white}
+.questions a{margin-right:20px;}
+.contacts{margin-left:160px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white}
+.contacts img[src*='heart']{position:relative; top:4px;}
+.contacts img[src*='search']{position:relative; left:50px; top:4px;}
+.contacts a{position:relative; left:64px;}
+.contacts img[src*='tel']{position:relative; left:114px; top:1px;}
+.contacts a.number{position:relative; left:131px;}
+.skr{display: flex; justify-content: right; margin-right: 60px;
+font:normal 12px Roboto; font-weight:600px; color:#7B7B7B}
+.zagolovok{font: normal 84px Raleway; color:white;margin-left:260px;margin-top: 140px;}
