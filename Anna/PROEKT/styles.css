@@ -107,9 +107,10 @@ font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
     position:relative; margin-top: 200px;
     }
 .about h1{
-    font: normal 42px Raleway; color:#333333; margin-left:260px
+    font: normal 40px Raleway; color:#333333; margin-left:260px;
 }
 .aboutus{
+    width:1400px;
     margin-top:76px; margin-left: 260px;
     display:flex;justify-content: space-between;list-style-type: none;
     font:normal 16px Montserrat; color:#333333;
@@ -117,7 +118,153 @@ font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
 .aboutus img{
     margin-bottom:25px;
 }
-.about h1:nth-of-type(2){margin-top: 226px;}
-.popular{margin-left:260px; margin-top:80px;display: flex;}
-.popular div{width:440px; height:600px; border-radius: 20px;}
-.popular h3{font:normal 36px Raleway; color:#333333;margin-top:30px; margin-left:30px}
+.about h1:nth-of-type(2){
+    margin-top: 226px;
+}
+.popular1{
+    display:flex; justify-content: space-between;
+    margin-left:260px; margin-top:80px; margin-right:60px;
+}
+.popular1 div{
+    box-shadow: 0px 4px 80px 0px #05091614; margin-right: 30px;
+    width:440px; height:600px; border-radius: 20px;
+}
+
+.popular1 h3{
+     font:normal 24px Raleway; color:#333333;margin-top:-50px; margin-left:30px
+}
+.popular1 h3:nth-of-type(2){
+    font:normal 22px Raleway; color:#333333; margin-top:20px
+}
+.popular1 div img[src*="img1"]{
+    position:relative; z-index:1}
+
+.popular1 div img[src*="b30"]{
+    position:relative; left:230px; bottom:330px; z-index:2
+}
+.popular1 div img[src*="circle"]{
+    position:relative; left:340px; bottom:90px; z-index:2
+}
+.popular1 div img[src*="b9"]
+{position:relative; left:230px; bottom:330px; z-index:2
+}
+.popular1 div ul{list-style-type:none;
+    margin-left:30px;
+}
+.popular1 div ul li{
+    font:normal 16px Montserrat; color:#727488;
+}
+.popular1 div ul li img[src*="bed"]{
+   margin-top:10px;padding-right:12px
+}
+.popular1 div ul li img[src*="entertainment"]{
+    margin-left:1px;margin-top:12px;padding-right:12.5px
+}
+.popular1 div ul li img[src*="flower"]{
+    margin-left:2px; margin-top:9px;padding-right:13.5px
+ }
+.popular1 div ul li img[src*="waterpool"]{
+    margin-left:1px; margin-top:12px;padding-right:11px
+ }
+.popular1 a{
+    font:normal 16px Montserrat; color:#F4683F; margin-left:60px
+}
+ 
+.popular2{
+    display:flex; justify-content: space-between;
+    margin-left:260px; margin-top:80px; margin-right:60px;
+}
+.popular2 div{
+    box-shadow: 0px 4px 80px 0px #05091614; margin-right: 30px;
+    width:440px; height:600px; border-radius: 20px;
+}
+
+.popular2 h3{
+     font:normal 24px Raleway; color:#333333;margin-top:-50px; margin-left:30px
+}
+.popular2 h3:nth-of-type(2){
+    font:normal 22px Raleway; color:#333333; margin-top:20px
+}
+.popular2 div img[src*="img1"]{
+    position:relative; z-index:1
+}
+.popular2 div img[src*="b30"]{
+    position:relative; left:230px; bottom:330px; z-index:2
+}
+.popular2 div img[src*="circle"]{
+    position:relative; left:340px; bottom:90px; z-index:2
+}
+.popular2 div img[src*="b14"]{
+    position:relative; left:230px; bottom:330px; z-index:2
+}
+.popular2 div img[src*="b8"]{
+    position:relative; left:230px; bottom:330px; z-index:2
+}
+.popular2 div ul{list-style-type:none;
+    margin-left:30px;
+}
+.popular2 div ul li{
+    font:normal 16px Montserrat; color:#727488;
+}
+.popular2 div ul li img[src*="bed"]{
+   margin-top:10px;padding-right:12px
+}
+.popular2 div ul li img[src*="entertainment"]{
+    margin-left:1px;margin-top:12px;padding-right:12.5px
+}
+.popular2 div ul li img[src*="flower"]{
+    margin-left:2px; margin-top:9px;padding-right:13.5px
+ }
+.popular2 div ul li img[src*="waterpool"]{
+    margin-left:1px; margin-top:12px;padding-right:11px
+ }
+.popular2 a{
+    font:normal 16px Montserrat; color:#F4683F; margin-left:60px
+}
+.end{
+    margin-left:260px;margin-top: 80px; display: flex; justify-content: center;
+}
+.catalg{
+    font:normal 18px Montserrat; color:white;width:280px; height:50px; border:transparent; border-radius: 200px; background-color: #F4683F;
+margin-top:290x;
+}
+
+.organization h1{
+    font: normal 40px Raleway; color:#333333; margin-left:260px; margin-top:213px; margin-bottom: 80px;
+   }
+.org1 { 
+    margin-left: 220px; margin-right:-100px;margin-bottom:40px;display: flex; justify-content: space-between;
+    
+   }
+.org1 div{margin-left: 20px;
+    width:440px; height:130px; border-radius: 20px;
+    font:normal 18px Montserrat; color: #333333;
+    box-shadow: 0px 4px 80px 0px #05091614;
+       }
+.org1 div img[src*="buffet 1"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -5px;
+  }
+.org1 div img[src*="chef"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -11px;
+  }
+.org1 div img[src*="cocktail"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -8px;
+  }
+.org2{ 
+    margin-left: 220px;  margin-right:-100px; margin-top:40px;
+    display: flex; justify-content: space-between;
+  }
+.org2 div{margin-left:20px; 
+    width:440px; height:130px; border-radius:20px;
+    font:normal 18px Montserrat; color: #333333;
+    box-shadow: 0px 4px 80px 0px #05091614;
+       }
+.org2 div img[src*="confetti"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -9px;
+  }
+.org2 div img[src*="Frame"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -12px;
+  }
+.org2 div img[src*="microphone"]{
+    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -9px;
+  }
