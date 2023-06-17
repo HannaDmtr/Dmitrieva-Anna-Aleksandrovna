@@ -268,3 +268,67 @@ margin-top:290x;
 .org2 div img[src*="microphone"]{
     margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -9px;
   }
+.end:nth-last-of-type(1){
+    margin-top:60px;
+}
+.uznat{
+    font:normal 18px Montserrat; color:white;width:280px; height:50px; border:transparent; border-radius: 200px; background-color: #F4683F;
+margin-top:290x;
+}
+.asks{
+    margin-top:250px;
+}
+.asks div:first-of-type{
+    margin-top:80px;
+}
+.asks div{
+     width:1400px; height:90px;
+    margin-left: 260px; 
+    border:solid 1px; border-color:  #C0C2D7 transparent transparent transparent;
+    font: normal 22px Raleway; font-weight: 800; color:#333333;
+    padding-top: 33px;
+}
+.asks div img{
+    float:right; margin-right:30px; margin-top: 6px;}
+.asks div:last-of-type{ 
+    border:solid 1px; border-color:  #C0C2D7 transparent  #C0C2D7 transparent;
+}
+.bg{
+    margin-top:250px;
+    position:relative;
+    z-index:1;
+    background: url('img/bg_photo2.png') no-repeat;
+    background-size: cover; height:775px;
+}
+.final{
+    position: absolute;
+    margin-left: auto; 
+    margin-right: auto;
+    width:1920px;
+      }
+.final h1{
+    position:relative;z-index: 3;
+    font: normal 40px Raleway; color:white; margin-left:380px; margin-top:233px; margin-bottom: 80px;
+    }
+.final h2{
+        position:relative;z-index: 3;
+        font: normal 18px Montserrat; line-height:28.8px; color:white; margin-left:380px; margin-top:-40px; 
+        }
+.zayvka{position:relative;
+    font:normal 18px Montserrat; color:white;width:280px; height:50px; border:transparent; border-radius: 200px; background-color: #F4683F;
+   top:320px; left:380px;
+    }
+.footer{
+    position: relative;
+    top:120px;
+    z-index: 2;
+    background: url('img/gradient1.png') no-repeat;
+    background-size: cover; height:775px;
+}
+
+.footer2{
+     position: relative;
+    top:120px;
+    z-index: 2;
+    background-color:#161723;    
+    background-size: cover; height:350px;}
