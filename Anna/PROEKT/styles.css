@@ -1,35 +1,123 @@
-*{padding:0px;
+*{
+    padding:0px;
     margin:0px;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
-.header{background: url('img/gradient.png') no-repeat, url('img/bg_photo.png') no-repeat;overflow: scroll;  height: 100vh;}
+.header{background: url('img/gradient.png') no-repeat , url('img/bg_photo.png') no-repeat; background-size: cover; height: 949px;
+}
 
-.container{margin-left: auto; 
+.container{
+    margin-left: auto; 
     margin-right: auto;
-    width:1920px}
+    width:1920px;
+}
 
-.menu{margin-left:60px; display:flex;}
-.menu .logo {width:411px;display:flex; justify-content: space-between;} 
-.menu .logo div img[src*='Vector']{position:relative;margin-top:43px;}
-.menu .logo div img[src*='Union']{position:relative;height:23.5px;left:50px; top:-32px}
-.menu .logo div.Kazan{margin-top: 51px;margin-left:90px; font:normal 18px Montserrat; font-weight:600px; color:white}
-.Kazan img[src*='vector1']{position:relative; margin-top:3px;}
-.Kazan a{position:relative; left:18px; top:-23px;}
-.Kazan img[src*='vector2']{position:relative; left:90px; top:-48px;}
-.ctlg{margin-top:46px; margin-left:62px;}
-.ctlg button{width:136px; height:40px; 
+.menu{
+    margin-left:60px; display:flex;
+}
+.menu .logo {
+    width:411px;display:flex; justify-content: space-between;
+} 
+.menu .logo div img[src*='Vector']{
+    position:relative;margin-top:43px;
+}
+.menu .logo div img[src*='Union']{
+    position:relative;height:23.5px;left:50px; top:-32px
+}
+.menu .logo div.Kazan{
+    margin-top: 51px;margin-left:90px; font:normal 18px Montserrat; font-weight:600px; color:white
+}
+.Kazan img[src*='vector1']{
+    position:relative; margin-top:3px;
+}
+.Kazan a{
+    position:relative; left:18px; top:-23px;
+}
+.Kazan img[src*='vector2']{
+    position:relative; left:90px; top:-48px;
+}
+.ctlg{
+    margin-top:46px; margin-left:62px;
+}
+.ctlg button{
+    width:136px; height:40px; 
     background-color:transparent;
     font:normal 18px Montserrat; font-weight:600px; color:white;
-    border-color: white;border-radius: 200px;}
-.questions{margin-left:330px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white}
-.questions a{margin-right:20px;}
-.contacts{margin-left:160px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white}
-.contacts img[src*='heart']{position:relative; top:4px;}
-.contacts img[src*='search']{position:relative; left:50px; top:4px;}
-.contacts a{position:relative; left:64px;}
-.contacts img[src*='tel']{position:relative; left:114px; top:1px;}
-.contacts a.number{position:relative; left:131px;}
-.skr{display: flex; justify-content: right; margin-right: 60px;
-font:normal 12px Roboto; font-weight:600px; color:#7B7B7B}
-.zagolovok1{font: normal 84px Raleway; color:white;margin-left:260px;margin-top: 140px;}
-.zagolovok2{font: normal 25px Montserrat; color:white;margin-left:260px;margin-top: 30px;}
+    border-color: white;border-radius: 200px;
+}
+.questions{
+    margin-left:231px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white
+}
+.questions a{
+    margin-right:20px;
+}
+.contacts{
+    margin-left:106px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white
+}
+.contacts img[src*='heart']{
+    position:relative; top:4px;
+}
+.contacts img[src*='search']{
+    position:relative; left:30px; top:4px;
+}
+.contacts a{
+    position:relative; left:34px;
+}
+.contacts img[src*='tel']{
+    position:relative; left:74px; top:1px;
+}
+.contacts a.number{
+    position:relative; left:82px;
+}
+.skr{
+    display: flex; justify-content: right; margin-right: 257px;
+font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
+}
+.zagolovok1{
+    font: normal 84px Raleway; color:white;margin-left:260px;margin-top: 140px;
+}
+.zagolovok2{
+    font: normal 25px Montserrat; color:white;margin-left:260px;margin-top: 30px;
+}
+.ss{
+    width:256px; position: absolute;  
+    margin-left:260px; margin-top: 250px;
+}
+.ss img[src*="inst"]{
+    position:relative;top:0.5px; left:23px
+}
+.ss img[src*="logo_vk"]{
+    position:relative;top:-2.8px; left:46px;
+}
+.ss img[src*="whatsapp"]{
+    position:relative;top:1px; left:69px;
+}
+.ss img[src*="telegram"]{
+    position:relative; left:92px;
+}
+.content { 
+    background: url('img/bg_about.png') no-repeat 80% -190%;
+    margin-left: auto; 
+    margin-right: auto;
+    width:1920px;
+}
+.about{
+    padding-right: 380px;
+    position:relative; margin-top: 200px;
+    }
+.about h1{
+    font: normal 42px Raleway; color:#333333; margin-left:260px
+}
+.aboutus{
+    margin-top:76px; margin-left: 260px;
+    display:flex;justify-content: space-between;list-style-type: none;
+    font:normal 16px Montserrat; color:#333333;
+}
+.aboutus img{
+    margin-bottom:25px;
+}
+.about h1:nth-of-type(2){margin-top: 226px;}
+.popular{margin-left:260px; margin-top:80px;display: flex;}
+.popular div{width:440px; height:600px; border-radius: 20px;}
+.popular h3{font:normal 36px Raleway; color:#333333;margin-top:30px; margin-left:30px}
