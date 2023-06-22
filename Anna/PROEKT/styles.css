@@ -17,7 +17,7 @@
     margin-left:60px; display:flex;
 }
 .menu .logo {
-    width:411px;display:flex; justify-content: space-between;
+    width:547px;display:flex; justify-content: space-between;
 } 
 .menu .logo div img[src*='Vector']{
     position:relative;margin-top:43px;
@@ -47,13 +47,13 @@
     border-color: white;border-radius: 200px;
 }
 .questions{
-    margin-left:231px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white
+    margin-left:201px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white
 }
 .questions a{
     margin-right:20px;
 }
 .contacts{
-    margin-left:106px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white
+    margin-left:174px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white
 }
 .contacts img[src*='heart']{
     position:relative; top:4px;
@@ -70,15 +70,18 @@
 .contacts a.number{
     position:relative; left:82px;
 }
-.skr{
-    display: flex; justify-content: right; margin-right: 257px;
-font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
+.skr {float:right; padding-right: 75px;
+   font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
 }
 .zagolovok1{
-    font: normal 84px Raleway; color:white;margin-left:260px;margin-top: 140px;
+    font: normal 60px Raleway; color:white;margin-left:260px;margin-top: 140px;
 }
 .zagolovok2{
     font: normal 25px Montserrat; color:white;margin-left:260px;margin-top: 30px;
+}
+.form{float:right;
+   margin-top: -260px; margin-right:340px;
+    width:360px; height:497px; background-color: white;border-radius: 20px;
 }
 .ss{
     width:256px; position: absolute;  
@@ -103,14 +106,13 @@ font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
     width:1920px;
 }
 .about{
-    padding-right: 380px;
-    position:relative; margin-top: 200px;
+    padding-right: 320px;
+    position:relative; margin-top: 500px;
     }
 .about h1{
     font: normal 40px Raleway; color:#333333; margin-left:260px;
 }
 .aboutus{
-    width:1400px;
     margin-top:76px; margin-left: 260px;
     display:flex;justify-content: space-between;list-style-type: none;
     font:normal 16px Montserrat; color:#333333;
