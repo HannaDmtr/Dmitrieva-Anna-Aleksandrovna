@@ -1,321 +1,606 @@
-*{
-    padding:0px;
-    margin:0px;
+* {
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
-.header{background: url('img/gradient.png') no-repeat , url('img/bg_photo.png') no-repeat; background-size: cover; height: 949px;
+.header {
+    background: url('img/gradient.png') no-repeat, url('img/bg_photo.png') no-repeat;
+    background-size: cover;
+    height: 949px;
 }
 
-.container{
-    margin-left: auto; 
+.container {
+    margin-left: auto;
     margin-right: auto;
-    width:1920px;
+    width: 1920px;
 }
 
-.menu{
-    margin-left:60px; display:flex;
+.menu {
+    margin-left: 60px;
+    display: flex;
 }
+
 .menu .logo {
-    width:547px;display:flex; justify-content: space-between;
-} 
-.menu .logo div img[src*='Vector']{
-    position:relative;margin-top:43px;
+    width: 547px;
+    display: flex;
+    justify-content: space-between;
 }
-.menu .logo div img[src*='Union']{
-    position:relative;height:23.5px;left:50px; top:-32px
+
+.menu .logo div img[src*='Vector'] {
+    position: relative;
+    margin-top: 43px;
 }
-.menu .logo div.Kazan{
-    margin-top: 51px;margin-left:90px; font:normal 18px Montserrat; font-weight:600px; color:white
+
+.menu .logo div img[src*='Union'] {
+    position: relative;
+    height: 23.5px;
+    left: 50px;
+    top: -32px
 }
-.Kazan img[src*='vector1']{
-    position:relative; margin-top:3px;
+
+.menu .logo div.Kazan {
+    margin-top: 51px;
+    margin-left: 90px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: white
 }
-.Kazan a{
-    position:relative; left:18px; top:-23px;
+
+.Kazan img[src*='vector1'] {
+    position: relative;
+    margin-top: 3px;
 }
-.Kazan img[src*='vector2']{
-    position:relative; left:90px; top:-48px;
+
+.Kazan a {
+    position: relative;
+    left: 18px;
+    top: -23px;
 }
-.ctlg{
-    margin-top:46px; margin-left:62px;
+
+.Kazan img[src*='vector2'] {
+    position: relative;
+    left: 90px;
+    top: -48px;
 }
-.ctlg button{
-    width:136px; height:40px; 
-    background-color:transparent;
-    font:normal 18px Montserrat; font-weight:600px; color:white;
-    border-color: white;border-radius: 200px;
+
+.ctlg {
+    margin-top: 46px;
+    margin-left: 62px;
 }
-.questions{
-    margin-left:201px; margin-top:55px;font:normal 18px Montserrat; font-weight:600px; color:white
+
+.ctlg button {
+    width: 136px;
+    height: 40px;
+    background-color: transparent;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: white;
+    border-color: white;
+    border-radius: 200px;
 }
-.questions a{
-    margin-right:20px;
+
+.questions {
+    margin-left: 201px;
+    margin-top: 55px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: white
 }
-.contacts{
-    margin-left:174px; margin-top:50px;font:normal 18px Montserrat; font-weight:600px; color:white
+
+.questions a {
+    margin-right: 20px;
 }
-.contacts img[src*='heart']{
-    position:relative; top:4px;
+
+.contacts {
+    margin-left: 174px;
+    margin-top: 50px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: white
 }
-.contacts img[src*='search']{
-    position:relative; left:30px; top:4px;
+
+.contacts img[src*='heart'] {
+    position: relative;
+    top: 4px;
 }
-.contacts a{
-    position:relative; left:34px;
+
+.contacts img[src*='search'] {
+    position: relative;
+    left: 30px;
+    top: 4px;
 }
-.contacts img[src*='tel']{
-    position:relative; left:74px; top:1px;
+
+.contacts a {
+    position: relative;
+    left: 34px;
 }
-.contacts a.number{
-    position:relative; left:82px;
+
+.contacts img[src*='tel'] {
+    position: relative;
+    left: 74px;
+    top: 1px;
 }
-.skr {float:right; padding-right: 75px;
-   font:normal 12px Roboto; font-weight:600px; color:#7B7B7B
+
+.contacts a.number {
+    position: relative;
+    left: 82px;
 }
-.zagolovok1{
-    font: normal 60px Raleway; color:white;margin-left:260px;margin-top: 140px;
+
+.skr {
+    float: right;
+    padding-right: 75px;
+    font: normal 12px Roboto;
+    font-weight: 600px;
+    color: #7B7B7B
 }
-.zagolovok2{
-    font: normal 25px Montserrat; color:white;margin-left:260px;margin-top: 30px;
+
+.zagolovok1 {
+    font: normal 60px Raleway;
+    color: white;
+    margin-left: 260px;
+    margin-top: 140px;
 }
-.form{float:right;
-   margin-top: -260px; margin-right:340px;
-    width:360px; height:497px; background-color: white;border-radius: 20px;
+
+.zagolovok2 {
+    font: normal 25px Montserrat;
+    color: white;
+    margin-left: 260px;
+    margin-top: 30px;
 }
-.ss{
-    width:256px; position: absolute;  
-    margin-left:260px; margin-top: 250px;
+
+.form {
+    float: right;
+    margin-top: -260px;
+    margin-right: 340px;
+    width: 360px;
+    height: 497px;
+    background-color: white;
+    border-radius: 20px;
 }
-.ss img[src*="inst"]{
-    position:relative;top:0.5px; left:23px
+
+.ss {
+    width: 256px;
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 250px;
 }
-.ss img[src*="logo_vk"]{
-    position:relative;top:-2.8px; left:46px;
+
+.ss img[src*="inst"] {
+    position: relative;
+    top: 0.5px;
+    left: 23px
 }
-.ss img[src*="whatsapp"]{
-    position:relative;top:1px; left:69px;
+
+.ss img[src*="logo_vk"] {
+    position: relative;
+    top: -2.8px;
+    left: 46px;
 }
-.ss img[src*="telegram"]{
-    position:relative; left:92px;
+
+.ss img[src*="whatsapp"] {
+    position: relative;
+    top: 1px;
+    left: 69px;
 }
-.content { 
+
+.ss img[src*="telegram"] {
+    position: relative;
+    left: 92px;
+}
+
+.content {
     background: url('img/bg_about.png') no-repeat 80% -190%;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
-    width:1920px;
+    width: 1920px;
 }
-.about{
+
+.about {
     padding-right: 320px;
-    position:relative; margin-top: 500px;
-    }
-.about h1{
-    font: normal 40px Raleway; color:#333333; margin-left:260px;
+    position: relative;
+    margin-top: 500px;
 }
-.aboutus{
-    margin-top:76px; margin-left: 260px;
-    display:flex;justify-content: space-between;list-style-type: none;
-    font:normal 16px Montserrat; color:#333333;
+
+.about h1 {
+    font: normal 40px Raleway;
+    color: #333333;
+    margin-left: 260px;
 }
-.aboutus img{
-    margin-bottom:25px;
+
+.aboutus {
+    margin-top: 76px;
+    margin-left: 260px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font: normal 16px Montserrat;
+    color: #333333;
 }
-.about h1:nth-of-type(2){
+
+.aboutus img {
+    margin-bottom: 25px;
+}
+
+.about h1:nth-of-type(2) {
     margin-top: 226px;
 }
-.popular1{
-    display:flex; justify-content: space-between;
-    margin-left:260px; margin-top:80px; margin-right:60px;
-}
-.popular1 div{
-    box-shadow: 0px 4px 80px 0px #05091614; margin-right: 30px;
-    width:440px; height:600px; border-radius: 20px;
+
+.popular1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 260px;
+    margin-top: 80px;
+    margin-right: 60px;
 }
 
-.popular1 h3{
-     font:normal 24px Raleway; color:#333333;margin-top:-50px; margin-left:30px
-}
-.popular1 h3:nth-of-type(2){
-    font:normal 22px Raleway; color:#333333; margin-top:20px
-}
-.popular1 div img[src*="img1"]{
-    position:relative; z-index:1}
-
-.popular1 div img[src*="b30"]{
-    position:relative; left:230px; bottom:330px; z-index:2
-}
-.popular1 div img[src*="circle"]{
-    position:relative; left:340px; bottom:90px; z-index:2
-}
-.popular1 div img[src*="b9"]
-{position:relative; left:230px; bottom:330px; z-index:2
-}
-.popular1 div ul{list-style-type:none;
-    margin-left:30px;
-}
-.popular1 div ul li{
-    font:normal 16px Montserrat; color:#727488;
-}
-.popular1 div ul li img[src*="bed"]{
-   margin-top:10px;padding-right:12px
-}
-.popular1 div ul li img[src*="entertainment"]{
-    margin-left:1px;margin-top:12px;padding-right:12.5px
-}
-.popular1 div ul li img[src*="flower"]{
-    margin-left:2px; margin-top:9px;padding-right:13.5px
- }
-.popular1 div ul li img[src*="waterpool"]{
-    margin-left:1px; margin-top:12px;padding-right:11px
- }
-.popular1 a{
-    font:normal 16px Montserrat; color:#F4683F; margin-left:60px
-}
- 
-.popular2{
-    display:flex; justify-content: space-between;
-    margin-left:260px; margin-top:80px; margin-right:60px;
-}
-.popular2 div{
-    box-shadow: 0px 4px 80px 0px #05091614; margin-right: 30px;
-    width:440px; height:600px; border-radius: 20px;
-}
-
-.popular2 h3{
-     font:normal 24px Raleway; color:#333333;margin-top:-50px; margin-left:30px
-}
-.popular2 h3:nth-of-type(2){
-    font:normal 22px Raleway; color:#333333; margin-top:20px
-}
-.popular2 div img[src*="img1"]{
-    position:relative; z-index:1
-}
-.popular2 div img[src*="b30"]{
-    position:relative; left:230px; bottom:330px; z-index:2
-}
-.popular2 div img[src*="circle"]{
-    position:relative; left:340px; bottom:90px; z-index:2
-}
-.popular2 div img[src*="b14"]{
-    position:relative; left:230px; bottom:330px; z-index:2
-}
-.popular2 div img[src*="b8"]{
-    position:relative; left:230px; bottom:330px; z-index:2
-}
-.popular2 div ul{list-style-type:none;
-    margin-left:30px;
-}
-.popular2 div ul li{
-    font:normal 16px Montserrat; color:#727488;
-}
-.popular2 div ul li img[src*="bed"]{
-   margin-top:10px;padding-right:12px
-}
-.popular2 div ul li img[src*="entertainment"]{
-    margin-left:1px;margin-top:12px;padding-right:12.5px
-}
-.popular2 div ul li img[src*="flower"]{
-    margin-left:2px; margin-top:9px;padding-right:13.5px
- }
-.popular2 div ul li img[src*="waterpool"]{
-    margin-left:1px; margin-top:12px;padding-right:11px
- }
-.popular2 a{
-    font:normal 16px Montserrat; color:#F4683F; margin-left:60px
-}
-.end{
-    margin-left:260px;margin-top: 80px; display: flex; justify-content: center;
-}
-.catalg{
-    font:normal 18px Montserrat; color:white;width:280px; height:50px; border:transparent; border-radius: 200px; background-color: #F4683F;
-margin-top:290x;
-}
-
-.organization h1{
-    font: normal 40px Raleway; color:#333333; margin-left:260px; margin-top:213px; margin-bottom: 80px;
-   }
-.org1 { 
-    margin-left: 220px; margin-right:-100px;margin-bottom:40px;display: flex; justify-content: space-between;
-    
-   }
-.org1 div{margin-left: 20px;
-    width:440px; height:130px; border-radius: 20px;
-    font:normal 18px Montserrat; color: #333333;
+.popular1 div {
     box-shadow: 0px 4px 80px 0px #05091614;
-       }
-.org1 div img[src*="buffet 1"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -5px;
-  }
-.org1 div img[src*="chef"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -11px;
-  }
-.org1 div img[src*="cocktail"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -8px;
-  }
-.org2{ 
-    margin-left: 220px;  margin-right:-100px; margin-top:40px;
-    display: flex; justify-content: space-between;
-  }
-.org2 div{margin-left:20px; 
-    width:440px; height:130px; border-radius:20px;
-    font:normal 18px Montserrat; color: #333333;
+    margin-right: 30px;
+    width: 440px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.popular1 h3 {
+    font: normal 24px Raleway;
+    color: #333333;
+    margin-top: -50px;
+    margin-left: 30px
+}
+
+.popular1 h3:nth-of-type(2) {
+    font: normal 22px Raleway;
+    color: #333333;
+    margin-top: 20px
+}
+
+.popular1 div img[src*="img1"] {
+    position: relative;
+    z-index: 1
+}
+
+.popular1 div img[src*="b30"] {
+    position: relative;
+    left: 230px;
+    bottom: 330px;
+    z-index: 2
+}
+
+.popular1 div img[src*="circle"] {
+    position: relative;
+    left: 340px;
+    bottom: 90px;
+    z-index: 2
+}
+
+.popular1 div img[src*="b9"] {
+    position: relative;
+    left: 230px;
+    bottom: 330px;
+    z-index: 2
+}
+
+.popular1 div ul {
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.popular1 div ul li {
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.popular1 div ul li img[src*="bed"] {
+    margin-top: 10px;
+    padding-right: 12px
+}
+
+.popular1 div ul li img[src*="entertainment"] {
+    margin-left: 1px;
+    margin-top: 12px;
+    padding-right: 12.5px
+}
+
+.popular1 div ul li img[src*="flower"] {
+    margin-left: 2px;
+    margin-top: 9px;
+    padding-right: 13.5px
+}
+
+.popular1 div ul li img[src*="waterpool"] {
+    margin-left: 1px;
+    margin-top: 12px;
+    padding-right: 11px
+}
+
+.popular1 a {
+    font: normal 16px Montserrat;
+    color: #F4683F;
+    margin-left: 60px
+}
+
+.popular2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 260px;
+    margin-top: 80px;
+    margin-right: 60px;
+}
+
+.popular2 div {
     box-shadow: 0px 4px 80px 0px #05091614;
-       }
-.org2 div img[src*="confetti"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -9px;
-  }
-.org2 div img[src*="Frame"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -12px;
-  }
-.org2 div img[src*="microphone"]{
-    margin-top:49px; margin-left: 44px;margin-right:21px; vertical-align: -9px;
-  }
-.end:nth-last-of-type(1){
-    margin-top:60px;
+    margin-right: 30px;
+    width: 440px;
+    height: 600px;
+    border-radius: 20px;
 }
-.uznat{
-    font:normal 18px Montserrat; color:white;width:280px; height:50px; border:transparent; border-radius: 200px; background-color: #F4683F;
-margin-top:290x;
+
+.popular2 h3 {
+    font: normal 24px Raleway;
+    color: #333333;
+    margin-top: -50px;
+    margin-left: 30px
 }
-.asks{
-    margin-top:250px;
+
+.popular2 h3:nth-of-type(2) {
+    font: normal 22px Raleway;
+    color: #333333;
+    margin-top: 20px
 }
-.asks div:first-of-type{
-    margin-top:80px;
+
+.popular2 div img[src*="img1"] {
+    position: relative;
+    z-index: 1
 }
-.asks div{
-     width:1400px; height:90px;
-    margin-left: 260px; 
-    border:solid 1px; border-color:  #C0C2D7 transparent transparent transparent;
-    font: normal 22px Raleway; font-weight: 800; color:#333333;
+
+.popular2 div img[src*="b30"] {
+    position: relative;
+    left: 230px;
+    bottom: 330px;
+    z-index: 2
+}
+
+.popular2 div img[src*="circle"] {
+    position: relative;
+    left: 340px;
+    bottom: 90px;
+    z-index: 2
+}
+
+.popular2 div img[src*="b14"] {
+    position: relative;
+    left: 230px;
+    bottom: 330px;
+    z-index: 2
+}
+
+.popular2 div img[src*="b8"] {
+    position: relative;
+    left: 230px;
+    bottom: 330px;
+    z-index: 2
+}
+
+.popular2 div ul {
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.popular2 div ul li {
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.popular2 div ul li img[src*="bed"] {
+    margin-top: 10px;
+    padding-right: 12px
+}
+
+.popular2 div ul li img[src*="entertainment"] {
+    margin-left: 1px;
+    margin-top: 12px;
+    padding-right: 12.5px
+}
+
+.popular2 div ul li img[src*="flower"] {
+    margin-left: 2px;
+    margin-top: 9px;
+    padding-right: 13.5px
+}
+
+.popular2 div ul li img[src*="waterpool"] {
+    margin-left: 1px;
+    margin-top: 12px;
+    padding-right: 11px
+}
+
+.popular2 a {
+    font: normal 16px Montserrat;
+    color: #F4683F;
+    margin-left: 60px
+}
+
+.end {
+    margin-left: 260px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.catalg {
+    font: normal 18px Montserrat;
+    color: white;
+    width: 280px;
+    height: 50px;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+    margin-top: 290x;
+}
+
+.organization h1 {
+    font: normal 40px Raleway;
+    color: #333333;
+    margin-left: 260px;
+    margin-top: 213px;
+    margin-bottom: 80px;
+}
+
+.org1 {
+    margin-left: 220px;
+    margin-right: -100px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.org1 div {
+    margin-left: 20px;
+    width: 440px;
+    height: 130px;
+    border-radius: 20px;
+    font: normal 18px Montserrat;
+    color: #333333;
+    box-shadow: 0px 4px 80px 0px #05091614;
+}
+
+.org1 div img[src*="buffet 1"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -5px;
+}
+
+.org1 div img[src*="chef"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -11px;
+}
+
+.org1 div img[src*="cocktail"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -8px;
+}
+
+.org2 {
+    margin-left: 220px;
+    margin-right: -100px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.org2 div {
+    margin-left: 20px;
+    width: 440px;
+    height: 130px;
+    border-radius: 20px;
+    font: normal 18px Montserrat;
+    color: #333333;
+    box-shadow: 0px 4px 80px 0px #05091614;
+}
+
+.org2 div img[src*="confetti"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -9px;
+}
+
+.org2 div img[src*="Frame"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -12px;
+}
+
+.org2 div img[src*="microphone"] {
+    margin-top: 49px;
+    margin-left: 44px;
+    margin-right: 21px;
+    vertical-align: -9px;
+}
+
+.end:nth-last-of-type(1) {
+    margin-top: 60px;
+}
+
+.uznat {
+    font: normal 18px Montserrat;
+    color: white;
+    width: 280px;
+    height: 50px;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+    margin-top: 290x;
+}
+
+.asks {
+    margin-top: 250px;
+}
+
+.asks div:first-of-type {
+    margin-top: 80px;
+}
+
+.asks div {
+    width: 1400px;
+    height: 90px;
+    margin-left: 260px;
+    border: solid 1px;
+    border-color: #C0C2D7 transparent transparent transparent;
+    font: normal 22px Raleway;
+    font-weight: 800;
+    color: #333333;
     padding-top: 33px;
 }
-.asks div img{
-    float:right; margin-right:30px; margin-top: 6px;}
-.asks div:last-of-type{ 
-    border:solid 1px; border-color:  #C0C2D7 transparent  #C0C2D7 transparent;
-}
-.bg{
-    margin-top:250px;
-    background: url('img/bg_photo2.png') no-repeat;
-    background-size: cover; height:775px;
-}
-.final{
-    margin-left: auto; 
-    margin-right: auto;
-    width:1920px;
-      }
 
-.footer{
-    position: relative;
-    top:210px;
+.asks div img {
+    float: right;
+    margin-right: 30px;
+    margin-top: 6px;
+}
+
+.asks div:last-of-type {
+    border: solid 1px;
+    border-color: #C0C2D7 transparent #C0C2D7 transparent;
+}
+
+.bg {
+    margin-top: 250px;
+    background: url('img/bg_photo2.png') no-repeat;
+    background-size: cover;
+    height: 775px;
+}
+
+.final {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1920px;
+}
+
+.footer {
+    position:relative;
+    top:100px;
     z-index: 3;
-    background: url('img/gradient1.png') no-repeat; background-size: cover;
-  
-    }
-.footer2{
+    height: 775px;
+    background: url('img/gradient1.png') no-repeat;
+    background-size: cover;
+
+}
+
+.footer2 {
     position: relative;
-    top:110px;
     z-index: 3;
-    background-color:#161723;    
-    background-size: cover; height:350px;}
+    top:30px;
+    height: 350px;
+    background-color: #161723;
+    background-size: cover;
+
+}
