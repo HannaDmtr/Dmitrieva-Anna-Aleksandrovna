@@ -2,23 +2,28 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+
 }
 
 .header {
+    margin-right: -20px;
     background: url('img/gradient.png') no-repeat, url('img/bg_photo.png') no-repeat;
     background-size: cover;
     height: 949px;
+
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
     width: 1920px;
+
 }
 
 .menu {
     margin-left: 60px;
     display: flex;
+
 }
 
 .menu .logo {
@@ -129,7 +134,7 @@
 
 .skr {
     float: right;
-    padding-right: 75px;
+    padding-right: 80px;
     font: normal 12px Roboto;
     font-weight: 600px;
     color: #7B7B7B
@@ -199,7 +204,7 @@
 .about {
     padding-right: 320px;
     position: relative;
-    margin-top: 500px;
+    margin-top: 260px;
 }
 
 .about h1 {
@@ -572,35 +577,97 @@
     border-color: #C0C2D7 transparent #C0C2D7 transparent;
 }
 
-.bg {
-    margin-top: 250px;
+.footer {
     background: url('img/bg_photo2.png') no-repeat;
     background-size: cover;
-    height: 775px;
+    height: 1305px;
+    margin-right: -20px;
+    margin-top: 280px;
 }
 
-.final {
+.bg {
     margin-left: auto;
     margin-right: auto;
     width: 1920px;
-}
-
-.footer {
-    position:relative;
-    top:100px;
-    z-index: 3;
-    height: 775px;
-    background: url('img/gradient1.png') no-repeat;
-    background-size: cover;
 
 }
 
-.footer2 {
-    position: relative;
-    z-index: 3;
-    top:30px;
-    height: 350px;
-    background-color: #161723;
-    background-size: cover;
+#zagolovok3 {
+    padding-left: 380px;
+    padding-top: 233px;
+    font: normal 40px Raleway;
+    color: white;
 
 }
+
+#zagolovok4 {
+    margin-left: 380px;
+    margin-top: 20px;
+    font: normal 18px Montserrat;
+    color: white;
+
+}
+
+.ostav {
+    font: normal 18px Montserrat;
+    color: white;
+    width: 280px;
+    height: 50px;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+    margin-top: 60px;
+    margin-left: 380px;
+}
+
+.bottom {
+    display: flex;
+   justify-content: space-evenly;
+    margin-top: 126px;
+}
+
+.bottom .logo1 {
+    margin-top: 392px;
+    margin-left: 126px;
+
+}
+
+.bottom img[src*='Vector'] {
+    margin-right: 9.28px;
+    vertical-align: -4px;
+}
+
+.bottom h4 {
+    font: normal 14px Montserrat;
+    color: #404256;
+    margin-bottom: 10px;
+}
+
+.bottom h4:first-of-type {
+    margin-top: 126px;
+}
+
+.bottom ul {
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 100px;
+    margin-top: 410px;
+    font: normal 22px Raleway;
+    color: white;
+    list-style-type: none;
+}
+
+.bottom ul li {
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+    margin-bottom: 12px;
+}
+
+.bottom ul li:first-of-type {
+    margin-top: 17px
+}
+.call{margin-top: 410px;
+font:normal 16px Montserrat; color: #C0C2D7;}
+.call img[src*='tel']{margin-right: 7px; vertical-align: -1px;}
+.call .ss{color:#C0C2D7;
+margin-left:-60px; margin-top:160px}
