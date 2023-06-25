@@ -15,7 +15,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 1920px;
-    --bs-gutter-x: 1rem;
+
 
 }
 
@@ -232,8 +232,38 @@
     float: left
 }
 
-.card1 img[src*='circle']{position: relative;
-    left: -325px;}
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card1 img[src*='circle'] {
+    position: relative;
+    left: -325px;
+}
+
+
+.card1 img[src*='arrow left'] {
+    position: relative;
+    top: 140px;
+    Left: -395px;
+}
+
+.card1 img[src*='arrow right'] {
+    position: relative;
+    top: 140px;
+    left: -153px;
+
+}
+
+.card1 img[src*='b30'] {
+    position: relative;
+    top: 30px;
+    left: 288px;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+
+}
 
 .card1 h3 {
     font: normal 24px Raleway;
@@ -241,33 +271,37 @@
     padding-top: 40px;
     margin-left: 360px;
 }
-.card1 .naim{position: relative;
+
+.card1 .naim {
+    position: relative;
     left: -45px;
+    top: -8px;
 }
 
 
-.card1 {margin-top:31px;
-    margin-left:-204px;
+.card1 {
+    margin-top: -580px;
+    margin-left: -204px;
     width: 880px;
     height: 300px;
     box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
 
 }
 
-.cards .descr {
+.card1 .descr {
     list-style-type: none;
     margin-left: 330px;
     margin-top: 30px;
 
 }
 
-.cards .descr li {
-    margin-top: 12px;
+.card1 .descr li {
+    margin-top: 13px;
     font: normal 16px Montserrat;
     color: #727488;
 }
 
-.cards .descr li img {
+.card1 .descr li img {
     margin-right: 13px;
 }
 
@@ -300,26 +334,410 @@
     margin-right: 45px;
 }
 
-.days li {margin-bottom: 18px;
+.days li {
+    margin-bottom: 18px;
     font: normal 18px Raleway;
     color: #333;
 }
 
-.days li h4 {margin-bottom: 5px;
+.days li h4 {
+    margin-bottom: 5px;
     font: normal 14px Montserrat;
     color: #727488;
 }
 
-.map h4{position:relative;
+.map h4 {
+    position: relative;
     left: 288px;
     top: 29px;
     font: normal 14px Montserrat;
-    color: #727488;}
-.map h3{position:relative;
+    color: #727488;
+}
+
+.map h3 {
+    position: relative;
     left: 397px;
     top: -36px;
     font: normal 14px Montserrat;
-        color:#F4683F}
+    color: #F4683F
+}
+
+.card2 img[src*='circle'] {
+    position: relative;
+    left: -325px;
+}
+
+
+.card2 img[src*='arrow left'] {
+    position: relative;
+    top: 140px;
+    Left: -395px;
+}
+
+.card2 img[src*='arrow right'] {
+    position: relative;
+    top: 140px;
+    left: -153px;
+
+}
+
+.card2 img[src*='b30'] {
+    position: relative;
+    top: 30px;
+    left: 288px;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+
+}
+
+.card2 h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    padding-top: 40px;
+    margin-left: 360px;
+}
+
+.card2 .naim {
+    position: relative;
+    left: -45px;
+    top: -6px;
+}
+
+
+.card2 {
+    margin-top: 31px;
+    margin-left: -204px;
+    width: 880px;
+    height: 300px;
+    box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
+
+}
+
+.card2 .descr {
+    list-style-type: none;
+    margin-left: 330px;
+    margin-top: 30px;
+
+}
+
+.card2 .descr li {
+    margin-top: 13px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.card2 .descr li img {
+    margin-right: 13px;
+}
+
+.card2 .descr li img[src*="entertainment"] {
+    padding-right: 3px;
+}
+
+.card2 .descr li img[src*="flower"] {
+    padding-right: 4px;
+    padding-left: 1px;
+
+}
+
+.card2 .descr li img[src*="waterpool"] {
+    padding-left: 1px;
+    padding-top: 2px;
+}
+
+.card2 div h4 {
+    position: relative;
+    top: -32px;
+    left: 302px;
+    margin-bottom: 5px;
+    font: normal 22px Raleway;
+    color: #333;
+}
+
+.card2 div.map h4 {
+    position: relative;
+    left: 288px;
+    top: -24px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card2 div.map h3 {
+    position: relative;
+    left: 397px;
+    top: -87px;
+    font: normal 14px Montserrat;
+    color: #F4683F
+}
+
+.card3 img[src*='circle'] {
+    position: relative;
+    left: -325px;
+}
+
+
+.card3 img[src*='arrow left'] {
+    position: relative;
+    top: 140px;
+    Left: -395px;
+}
+
+.card3 img[src*='arrow right'] {
+    position: relative;
+    top: 140px;
+    left: -153px;
+
+}
+
+.card3 img[src*='b35.png'] {
+    position: relative;
+    top: 30px;
+    left: 288px;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+
+}
+
+.card3 h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    padding-top: 40px;
+    margin-left: 360px;
+}
+
+.card3 .naim {
+    position: relative;
+    left: -45px;
+    top: -6px;
+}
+
+.card3 h2 {
+    font: normal 16px Montserrat;
+    color: #333;
+    position: relative;
+    left: -45px;
+}
+
+
+.card3 {
+    margin-top: 31px;
+    margin-left: -204px;
+    width: 880px;
+    height: 300px;
+    box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
+
+}
+
+.card3 .descr {
+    list-style-type: none;
+    margin-left: 330px;
+    margin-top: 30px;
+
+}
+
+.card3 .descr li {
+    margin-top: 13px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.card3 .descr li img {
+    margin-right: 13px;
+}
+
+.card3 .descr li img[src*="entertainment"] {
+    padding-right: 3px;
+}
+
+.card3 .descr li img[src*="flower"] {
+    padding-right: 4px;
+    padding-left: 1px;
+
+}
+
+.card3 .descr li img[src*="waterpool"] {
+    padding-left: 1px;
+    padding-top: 2px;
+}
+
+.card3 img[src*="line2"] {
+    position: relative;
+    top: -135px;
+    left: 270px;
+}
+
+.card3 .days {
+    float: right;
+    column-count: 2;
+    list-style-type: none;
+    margin-top: -128px;
+    margin-right: 45px;
+}
+
+.card3.days li {
+    margin-bottom: 18px;
+    font: normal 18px Raleway;
+    color: #333;
+}
+
+.card3.days li h4 {
+    margin-bottom: 5px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card3 div.map h4 {
+    position: relative;
+    left: 288px;
+    top: 8px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card3 div.map h3 {
+    position: relative;
+    left: 397px;
+    top: -56px;
+    font: normal 14px Montserrat;
+    color: #F4683F
+}
+
+.card4 img[src*='circle'] {
+    position: relative;
+    left: -325px;
+}
+
+
+.card4 img[src*='arrow left'] {
+    position: relative;
+    top: 140px;
+    Left: -395px;
+}
+
+.card4 img[src*='arrow right'] {
+    position: relative;
+    top: 140px;
+    left: -153px;
+
+}
+
+.card4 img[src*='b30'] {
+    position: relative;
+    top: 30px;
+    left: 288px;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+
+}
+
+.card4 h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    padding-top: 40px;
+    margin-left: 360px;
+}
+
+.card4 .naim {
+    position: relative;
+    left: -45px;
+    top: -8px;
+}
+
+
+.card4 {
+    margin-top: 31px;
+    margin-left: -204px;
+    width: 880px;
+    height: 300px;
+    box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
+
+}
+
+.card4 .descr {
+    list-style-type: none;
+    margin-left: 330px;
+    margin-top: 30px;
+
+}
+
+.card4 .descr li {
+    margin-top: 13px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.card4 .descr li img {
+    margin-right: 13px;
+}
+
+.card4 .descr li img[src*="entertainment"] {
+    padding-right: 3px;
+}
+
+.card4 .descr li img[src*="flower"] {
+    padding-right: 4px;
+    padding-left: 1px;
+
+}
+
+.card4 .descr li img[src*="waterpool"] {
+    padding-left: 1px;
+    padding-top: 2px;
+}
+
+.card4 img[src*="line2"] {
+    position: relative;
+    top: -135px;
+    left: 270px;
+}
+
+.card4 .days {
+    float: right;
+    column-count: 2;
+    list-style-type: none;
+    margin-top: -100px;
+    margin-right: 45px;
+}
+
+.card4.days li {
+    margin-bottom: 18px;
+    font: normal 18px Raleway;
+    color: #333;
+}
+
+.card4.days li h4 {
+    margin-bottom: 5px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card4 div.map h4 {
+    position: relative;
+    left: 288px;
+    top: 66px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card4 div.map h3 {
+    position: relative;
+    left: 397px;
+    top: 0px;
+    font: normal 14px Montserrat;
+    color: #F4683F
+}
+
+.mapsicle {
+    position: relative;
+    top: 20px;
+    left: 687px;
+}
+
+.mapsicle img[src*='map'] {
+    width: 700px;
+    height: 600px;
+}
+   
 
 .ss {
     width: 256px;
