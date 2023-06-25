@@ -136,7 +136,7 @@
 }
 
 .content ul {
-    margin-left: -233px;
+    margin-left: -240px;
     margin-right: -103px;
     display: flex;
     font: normal 16px Montserrat;
@@ -228,6 +228,98 @@
     margin-right: 8px;
 }
 
+.cards img {
+    float: left
+}
+
+.card1 img[src*='circle']{position: relative;
+    left: -325px;}
+
+.card1 h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    padding-top: 40px;
+    margin-left: 360px;
+}
+.card1 .naim{position: relative;
+    left: -45px;
+}
+
+
+.card1 {margin-top:31px;
+    margin-left:-204px;
+    width: 880px;
+    height: 300px;
+    box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
+
+}
+
+.cards .descr {
+    list-style-type: none;
+    margin-left: 330px;
+    margin-top: 30px;
+
+}
+
+.cards .descr li {
+    margin-top: 12px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.cards .descr li img {
+    margin-right: 13px;
+}
+
+.card1 .descr li img[src*="entertainment"] {
+    padding-right: 3px;
+}
+
+.card1 .descr li img[src*="flower"] {
+    padding-right: 4px;
+    padding-left: 1px;
+
+}
+
+.card1 .descr li img[src*="waterpool"] {
+    padding-left: 1px;
+    padding-top: 2px;
+}
+
+.card1 img[src*="line2"] {
+    position: relative;
+    top: -135px;
+    left: 270px;
+}
+
+.card1 .days {
+    float: right;
+    column-count: 2;
+    list-style-type: none;
+    margin-top: -128px;
+    margin-right: 45px;
+}
+
+.days li {margin-bottom: 18px;
+    font: normal 18px Raleway;
+    color: #333;
+}
+
+.days li h4 {margin-bottom: 5px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.map h4{position:relative;
+    left: 288px;
+    top: 29px;
+    font: normal 14px Montserrat;
+    color: #727488;}
+.map h3{position:relative;
+    left: 397px;
+    top: -36px;
+    font: normal 14px Montserrat;
+        color:#F4683F}
 
 .ss {
     width: 256px;
