@@ -7,7 +7,9 @@
 
 .header {
     background-color: white;
+   background-size: cover;
     height: 80px;
+   
 
 }
 
@@ -236,6 +238,20 @@
     display: flex;
     flex-direction: column;
 }
+.mapsicle img[src*='map']{width:700px;
+position: relative;
+left:688px;
+top:31px}
+
+.mapsicle img[src*='Rectangle 80']{
+    position: relative;
+    left: -18px;
+    top: 30px;}
+
+    .mapsicle img[src*='Rectangle 81']{
+        position: relative;
+        left: -22px;
+        top: 31px;}
 
 .card1 img[src*='circle'] {
     position: relative;
@@ -280,7 +296,7 @@
 
 
 .card1 {
-    margin-top: -580px;
+    margin-top: -551px;
     margin-left: -204px;
     width: 880px;
     height: 300px;
@@ -727,17 +743,6 @@
     color: #F4683F
 }
 
-.mapsicle {
-    position: relative;
-    top: 20px;
-    left: 687px;
-}
-
-.mapsicle img[src*='map'] {
-    width: 700px;
-    height: 600px;
-}
-   
 
 .ss {
     width: 256px;
@@ -777,13 +782,6 @@
     margin-top: 280px;
 }
 
-.bg {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1920px;
-
-}
-
 .bottom {
     display: flex;
     justify-content: space-evenly;
@@ -793,7 +791,7 @@
 
 .bottom .logo1 {
     margin-top: 78px;
-    margin-left: 230px;
+    margin-left: -180px;
 }
 
 .bottom img[src*='Vector'] {
