@@ -1,0 +1,172 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+.header {
+    background-color: white;
+    background-size: cover;
+    height: 121.5px;
+    border: solid 1px #C0C2D7;
+
+
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1920px;
+
+
+}
+
+.menu {
+    display: flex;
+    margin-left: -200px;
+
+}
+
+.menu .logo {
+    width: 547px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .logo div img[src*='Vector'] {
+    position: relative;
+    margin-top: 43px;
+}
+
+.menu .logo div img[src*='Union1'] {
+    position: relative;
+    height: 23.5px;
+    left: 50px;
+    top: -32px
+}
+
+.menu .logo div.Kazan {
+    margin-top: 51px;
+    margin-left: 90px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.Kazan img[src*='vector1'] {
+    margin-top: 6px;
+    vertical-align: -3px;
+}
+
+.Kazan a {
+    position: relative;
+    left: 18px;
+    top: -23px;
+}
+
+.Kazan img[src*='arrow down'] {
+    position: relative;
+    left: 88px;
+    top: -44px;
+}
+
+.ctlg {
+    margin-top: 46px;
+    margin-left: 62px;
+}
+
+.ctlg button {
+    width: 136px;
+    height: 40px;
+    font: normal 18px Montserrat;
+    color: white;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+}
+
+.questions {
+    margin-left: 135px;
+    margin-top: 55px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.questions a {
+    margin-right: 10px;
+}
+
+.contacts {
+    margin-left: 45px;
+    margin-top: 50px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.contacts img[src*='heart2'] {
+    position: relative;
+    top: 6px;
+    color: #333333;
+}
+
+.contacts img[src*='search1'] {
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+
+.contacts a {
+    position: relative;
+    left: 34px;
+    top: 6px
+}
+
+.contacts img[src*='tel1'] {
+    position: relative;
+    left: 74px;
+    top: 4px;
+}
+
+.contacts a.number {
+    text-decoration: none;
+    color: #333333;
+    position: relative;
+    left: 82px;
+}
+
+.name {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.name h2 {
+    font: normal 40px Raleway;
+    color: #333;
+    margin-top: -10px;
+    margin-left: -134px;
+}
+
+.name h3 {
+    font: normal 25px Montserrat;
+    color: #333;
+    margin-left: -27px;
+}
+
+.name img[src*='share'] {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 3px;
+   }
+.name img[src*='favorite'] {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 2px;
+    right: 61px;
+}
+
