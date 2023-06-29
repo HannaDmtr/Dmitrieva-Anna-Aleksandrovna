@@ -72,15 +72,21 @@
 .ctlg {
     margin-top: 46px;
     margin-left: 62px;
+
 }
 
-.ctlg button {
-    width: 136px;
-    height: 40px;
-    background-color: transparent;
+.ctlg a {
+    text-decoration: none;
     font: normal 18px Montserrat;
     font-weight: 600px;
     color: white;
+}
+
+.ctlg button {
+
+    width: 136px;
+    height: 40px;
+    background-color: transparent;
     border-color: white;
     border-radius: 200px;
 }
@@ -88,13 +94,15 @@
 .questions {
     margin-left: 201px;
     margin-top: 55px;
-    font: normal 18px Montserrat;
-    font-weight: 600px;
-    color: white
+
 }
 
 .questions a {
+    text-decoration: none;
     margin-right: 20px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: white
 }
 
 .contacts {
@@ -433,9 +441,13 @@
     justify-content: center;
 }
 
-.catalg {
+.end a {
+    text-decoration: none;
     font: normal 18px Montserrat;
     color: white;
+}
+
+.catalg {
     width: 280px;
     height: 50px;
     border: transparent;
@@ -622,7 +634,7 @@
 
 .bottom {
     display: flex;
-   justify-content: space-evenly;
+    justify-content: space-evenly;
     margin-top: 126px;
 }
 
@@ -666,8 +678,20 @@
 .bottom ul li:first-of-type {
     margin-top: 17px
 }
-.call{margin-top: 410px;
-font:normal 16px Montserrat; color: #C0C2D7;}
-.call img[src*='tel']{margin-right: 7px; vertical-align: -1px;}
-.call .ss{color:#C0C2D7;
-margin-left:-60px; margin-top:160px}
+
+.call {
+    margin-top: 410px;
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+}
+
+.call img[src*='tel'] {
+    margin-right: 7px;
+    vertical-align: -1px;
+}
+
+.call .ss {
+    color: #C0C2D7;
+    margin-left: -60px;
+    margin-top: 160px
+}

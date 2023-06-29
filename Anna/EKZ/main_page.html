@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>MainPage</title>
     
+    
 
 </head>
 
@@ -24,11 +25,11 @@
                 <div class="logo">
                     <div><img src="img/Vector.png"><img src="img/Union.png"></div>
                     <div class="Kazan"><img src="img/vector1.png"><a>Казань</a><img src="img/vector2.png"></div>
-                    <div class="ctlg"><button>Каталог</button></div>
+                    <div class="ctlg"><button><a href="catalog_page.html" target="_blank">Каталог</a></button></div>
                 </div>
                 <div class="questions">
-                    <a>Частые вопросы</a>
-                    <a>Сотрудничество</a>
+                    <a href="main_page.html#quest">Частые вопросы</a>
+                    <a href="main_page.html#work">Сотрудничество</a>
                 </div>
                 <div class="contacts"><img src="img/heart.png"><img src="img/search.png">
                     <a>Поиск по названию</a><img src="img/tel.png"><a class="number">8 (843) 528-65-48</a>
@@ -127,7 +128,7 @@
                 <h3>от 4000 ₽ / сутки <a>Подробнее</a></h3>
             </div>
         </div>
-        <div class="end"><button class="catalg">Перейти в каталог</button></div>
+        <div class="end"><button class="catalg"><a href="catalog_page.html" target="_blank">Перейти в каталог</a></button></div>
         <div class="organization">
             <h1>Можем организовать для Вас</h1>
         </div>
@@ -142,7 +143,7 @@
             <div><img src="img/microphone (Traced).png">Мероприятия под ключ</div>
         </div>
         <div class="end"><button class="uznat">Узнать подробнее</button></div>
-        <div class="asks">
+        <div class="asks"><a name="quest"></a>
             <h1>Частые вопросы</h1>
             <div>Как происходит бронирование?<img src="img/plus.png"></div>
             <div>Какая сумма предоплаты нужна?<img src="img/plus.png"></div>
@@ -156,7 +157,7 @@
         </div>
     </div>
     <div class="footer">
-        <div class="bg">
+        <div class="bg"><a name="work"></a>
             <h1 id="zagolovok3">Хотите сдать дом?</h1>
             <h2 id="zagolovok4">Оставьте заявку и мы свяжемся<br> с вами для уточнения деталей</h1>
                 <button class="ostav">Оставить заявку</button>
@@ -187,4 +188,9 @@
 
         </div>
     </div>
+    <script>
+        <button onclick="document.location='page/new.html'">Переход по ссылке</button>
+
+
+    </script>
 </body>

@@ -8,9 +8,9 @@
 .header {
     background-color: white;
     height: 121.5px;
-    border: solid 1px  #C0C2D7;
-    border-right: 0px ;
-    overflow:visible;
+    border: solid 1px #C0C2D7;
+    border-right: 0px;
+    overflow: visible;
 
 }
 
@@ -268,7 +268,8 @@
     top: 3px;
 }
 
-.price{float:right;
+.price {
+    float: right;
     position: relative;
     left: 40px;
     top: -160px;
@@ -278,10 +279,144 @@
     border: 1px solid #E1E1E1;
     background: #FFF;
     box-shadow: 0px 4px 50px 0px rgba(5, 9, 22, 0.12);
-    }
-.price h2{margin-top:50px;margin-left:80px;
-    font:normal 24px Raleway;
-color: #333}
+}
+
+.price h2 {
+    margin-top: 50px;
+    margin-left: 80px;
+    font: normal 24px Raleway;
+    color: #333
+}
+
+.days {
+    display: grid;
+    grid-template-columns: 205px 205px 168px;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.days li {
+    height: 100px;
+    font: normal 24px Raleway;
+    color: #333;
+}
+
+.days li h4 {
+    margin-bottom: 5px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.days img[src*='ques'] {
+    position: relative;
+    top: -32px;
+    left: -20px;
+    vertical-align: -7px;
+}
+
+.days img[src*='Vector 9'] {
+    position: relative;
+    top: -110px;
+    left: -45px;
+}
+
+.price img[src*='Vector 7'] {
+    position: relative;
+    top: -92px;
+    left: 80px;
+}
+
+.price div h4 {
+    font: normal 18px Montserrat;
+    color: #727488;
+    margin-top: -72px;
+    margin-left: 80px;
+}
+
+.price .weekend img[src*='Vector 7'] {
+    position: relative;
+    top: 8px;
+    left: 80px;
+}
+
+.weekend h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    float: right;
+    margin-top: -36px;
+    margin-right: 166px;
+}
+
+.holidays {
+    margin-top: 200px
+}
+
+.price .holidays h4 {
+    font: normal 18px Montserrat;
+    color: #727488;
+    margin-top: -95px;
+}
+
+.price .holidays h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    margin-left: 401px;
+    margin-top: -35px;
+
+}
+
+.price .btns {
+    display: grid;
+    grid-template-columns: 220px 300px;
+    margin-top: 52px;
+    margin-left: 80px;
+}
+
+.price button:first-of-type {
+    display: flex;
+    width: 192px;
+    height: 50px;
+    background-color: #F4683F;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    border: transparent;
+    font: normal 16px Montserrat;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.price .btns button:last-of-type {
+    display: flex;
+    width: 192px;
+    height: 50px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(21, 22, 34, 0.10);
+    font: normal 16px Montserrat;
+    color: #333;
+}
+
+.price .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 308px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(21, 22, 34, 0.10);
+    font:normal 16px Montserrat; color:#333;
+    text-align: center;
+}
+
 .opisanie {
     width: 680px;
     margin-left: -50px;
@@ -325,143 +460,164 @@ color: #333}
     left: -140px;
 }
 
-.videomap{ margin-left: -110px;
+.videomap {
+    margin-left: -110px;
 
-display: flex;}
-.videomap img[src*='map2']{width:680px;
-height:510px;
-margin-top: 40px;
-margin-left: -110px;}
-.videomap img[src*='play']{width: 72.857px;
-    height: 72.857px;position: relative;
+    display: flex;
+}
+
+.videomap img[src*='map2'] {
+    width: 680px;
+    height: 510px;
+    margin-top: 40px;
+    margin-left: -110px;
+}
+
+.videomap img[src*='play'] {
+    width: 72.857px;
+    height: 72.857px;
+    position: relative;
     top: 285px;
-    left: -415px;}
-    
-.otzyvy h2{ margin-left: -50px;
-        margin-top: 70px;
-        margin-bottom: 80px;
-        font: normal 24px Raleway;
-        color: #333;
-    }
-.otzyvy ul{list-style-type: none;
-     display: grid;
-    grid-template-columns: 350px 350px 350px 350px;
-margin-left:-70px}
+    left: -415px;
+}
 
-.otzyvy ul li{width: 320px;
+.otzyvy h2 {
+    margin-left: -50px;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    font: normal 24px Raleway;
+    color: #333;
+}
+
+.otzyvy ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    margin-left: -70px
+}
+
+.otzyvy ul li {
+    width: 320px;
     height: 569px;
     border-radius: 20px;
     background: #EEE;
-    margin-right:40px;}
-.otzyvy img[src*='arrow left2']{position: relative;
-    left: -100px;
-    top: 318px;}
-    .otzyvy img[src*='arrow right']{width: 40px;
-        height: 40px;
-        float:right;
-        position: relative;
-        top: -295px;
-        left: 100px;}
+    margin-right: 40px;
+}
 
-        .ss {
-            width: 256px;
-            position: absolute;
-            margin-left: 260px;
-            margin-top: 250px;
-        }
-        
-        .ss img[src*="inst"] {
-            position: relative;
-            top: 0.5px;
-            left: 23px
-        }
-        
-        .ss img[src*="logo_vk"] {
-            position: relative;
-            left: 46px;
-        }
-        
-        .ss img[src*="whatsapp"] {
-            position: relative;
-            top: 1px;
-            left: 69px;
-        }
-        
-        .ss img[src*="telegram"] {
-            position: relative;
-            left: 92px;
-            top: 6px;
-        }
-        
-        .footer {
-            background: linear-gradient(180deg, #161723 0%, #161723 100%);
-            background-size: cover;
-            height: 350px;
-            margin-right: -130px;
-            margin-top: 280px;
-        }
-        
-        .bottom {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 78px;
-            padding-right: 280px;
-        }
-        
-        .bottom .logo1 {
-            margin-top: 78px;
-            margin-left: -180px;
-        }
-        
-        .bottom img[src*='Vector'] {
-            margin-right: 9.28px;
-            vertical-align: -11px;
-        }
-        
-        .bottom h4 {
-            font: normal 14px Montserrat;
-            color: #404256;
-            margin-bottom: 10px;
-        }
-        
-        .bottom h4:first-of-type {
-            margin-top: 128px;
-        }
-        
-        .bottom ul {
-            column-count: 2;
-            column-fill: auto;
-            column-gap: 100px;
-            margin-top: 90px;
-            margin-bottom: -5px;
-            font: normal 22px Raleway;
-            color: white;
-            list-style-type: none;
-        }
-        
-        .bottom ul li {
-            font: normal 16px Montserrat;
-            color: #C0C2D7;
-            margin-bottom: 12px;
-        }
-        
-        .bottom ul li:first-of-type {
-            margin-top: 17px
-        }
-        
-        .call {
-            margin-top: 90px;
-            font: normal 16px Montserrat;
-            color: #C0C2D7;
-        }
-        
-        .call img[src*='tel'] {
-            margin-right: 7px;
-            vertical-align: -1px;
-        }
-        
-        .call .ss {
-            color: #C0C2D7;
-            margin-left: -60px;
-            margin-top: 144px
-        }
+.otzyvy img[src*='arrow left2'] {
+    position: relative;
+    left: -100px;
+    top: 318px;
+}
+
+.otzyvy img[src*='arrow right'] {
+    width: 40px;
+    height: 40px;
+    float: right;
+    position: relative;
+    top: -295px;
+    left: 100px;
+}
+
+.ss {
+    width: 256px;
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 250px;
+}
+
+.ss img[src*="inst"] {
+    position: relative;
+    top: 0.5px;
+    left: 23px
+}
+
+.ss img[src*="logo_vk"] {
+    position: relative;
+    left: 46px;
+}
+
+.ss img[src*="whatsapp"] {
+    position: relative;
+    top: 1px;
+    left: 69px;
+}
+
+.ss img[src*="telegram"] {
+    position: relative;
+    left: 92px;
+    top: 6px;
+}
+
+.footer {
+    background: linear-gradient(180deg, #161723 0%, #161723 100%);
+    background-size: cover;
+    height: 350px;
+    margin-right: -130px;
+    margin-top: 280px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 78px;
+    padding-right: 280px;
+}
+
+.bottom .logo1 {
+    margin-top: 78px;
+    margin-left: -180px;
+}
+
+.bottom img[src*='Vector'] {
+    margin-right: 9.28px;
+    vertical-align: -11px;
+}
+
+.bottom h4 {
+    font: normal 14px Montserrat;
+    color: #404256;
+    margin-bottom: 10px;
+}
+
+.bottom h4:first-of-type {
+    margin-top: 128px;
+}
+
+.bottom ul {
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 100px;
+    margin-top: 90px;
+    margin-bottom: -5px;
+    font: normal 22px Raleway;
+    color: white;
+    list-style-type: none;
+}
+
+.bottom ul li {
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+    margin-bottom: 12px;
+}
+
+.bottom ul li:first-of-type {
+    margin-top: 17px
+}
+
+.call {
+    margin-top: 90px;
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+}
+
+.call img[src*='tel'] {
+    margin-right: 7px;
+    vertical-align: -1px;
+}
+
+.call .ss {
+    color: #C0C2D7;
+    margin-left: -60px;
+    margin-top: 144px
+}
