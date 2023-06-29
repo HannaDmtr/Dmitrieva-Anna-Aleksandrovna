@@ -23,7 +23,7 @@
 .menu {
     margin-left: 60px;
     display: flex;
-
+visibility: visible;
 }
 
 .menu .logo {
@@ -142,11 +142,16 @@
 
 .skr {
     float: right;
-    padding-right: 80px;
+    padding-right: 82px;
+ 
+}
+
+.skr button{
     font: normal 12px Roboto;
     font-weight: 600px;
-    color: #7B7B7B
-}
+    color: #7B7B7B;
+background-color: transparent;
+border: transparent;}
 
 .zagolovok1 {
     font: normal 60px Raleway;
@@ -587,6 +592,59 @@
 .asks div:last-of-type {
     border: solid 1px;
     border-color: #C0C2D7 transparent #C0C2D7 transparent;
+}
+
+.okno {
+    width: 600px;
+    height: 139px;
+    text-align: center;
+    padding: 15px;
+    border: 0.1px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+   
+}
+#okno .forma{width:680px;
+height:50px;
+border:solid 1px #C0C2D7;
+border-radius: 20px;
+margin-top:30px;
+font:normal 18px Raleway;
+color:#C0C2D7;}
+
+#okno:target {
+    display: block;
+}
+.contacts a{text-decoration: none;
+    color:#fff;}
+#main {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#okno {
+    width: 1000px;
+    height: 139px;
+    text-align: center;
+    padding: 15px;
+    border: transparent;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #fff;
+    position: absolute;
+    top: -885px;
+    right: -491px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#main:target {
+    display: block;
 }
 
 .footer {
