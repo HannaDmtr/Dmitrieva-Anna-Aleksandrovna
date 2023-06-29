@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Anuphan&family=Inter:wght@300&family=Montserrat:wght@600&family=Raleway:wght@800&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/owl.carousel.min.css">
     <title>MainPage</title>
    
 </head>
@@ -38,7 +39,16 @@
             </div>
             <div class="zagolovok1">Аренда коттеджей<br> и домов в Казани</div>
             <div class="zagolovok2">Найдите идеальный вариант сами<br> или предоставьте это нам</div>
-            <div class="form"> </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="img/photo 1.png"></div>
+                <div class="item"><img src="img/photo 2.png"></div>
+                <div class="item"><img src="img/photo 3.png"></div>
+                <div class="item"><img src="img/photo 4.png"></div>
+                <div class="item"><img src="img/photo 5.png"></div>
+                              
+            </div>
+        
+           
 
             <div class="ss">
                 <img src="img/youtube 1 (Traced).png" alt="youtube">
@@ -193,12 +203,34 @@
 
         </div>
     </div>
-   
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
 <script>
 const mainmenu = document.getElementById('mainmenu');
 document.getElementById('hider').onclick = function() {
     mainmenu.style.visibility = 'hidden';}
 document.getElementById('show').onclick = function() {
     mainmenu.style.visibility = 'visible';}
+
+    $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 50,
+                nav: true,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        });
     </script>
 </body>
