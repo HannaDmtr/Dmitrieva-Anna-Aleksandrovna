@@ -23,7 +23,7 @@
 .menu {
     margin-left: 60px;
     display: flex;
-visibility: visible;
+    visibility: visible;
 }
 
 .menu .logo {
@@ -75,15 +75,12 @@ visibility: visible;
 
 }
 
-.ctlg a {
-    text-decoration: none;
-    font: normal 18px Montserrat;
-    font-weight: 600px;
-    color: white;
-}
+
 
 .ctlg button {
-
+    text-decoration: none;
+    font: normal 18px Montserrat;
+    color: white;
     width: 136px;
     height: 40px;
     background-color: transparent;
@@ -144,27 +141,34 @@ visibility: visible;
 .skr {
     float: right;
     padding-right: 82px;
- 
+
 }
 
-.skr button{
+.skr button {
     font: normal 14px Roboto;
     font-weight: 600px;
     color: #7B7B7B;
-background-color: transparent;
-border: transparent;}
-
-.owl-carousel{margin-top:80px;
-    padding-right:150px;
-    padding-left:260px}
-.owl-carousel .owl-stage-outer {width:900px;}
-
-
-.item{
     background-color: transparent;
-    width:220px;
-    height:200px;
+    border: transparent;
 }
+
+.owl-carousel {
+    margin-top: 80px;
+    padding-right: 150px;
+    padding-left: 260px
+}
+
+.owl-carousel .owl-stage-outer {
+    width: 900px;
+}
+
+
+.item {
+    background-color: transparent;
+    width: 220px;
+    height: 200px;
+}
+
 .zagolovok1 {
     font: normal 60px Raleway;
     color: white;
@@ -578,7 +582,9 @@ border: transparent;}
 .asks {
     margin-top: 250px;
 }
-.asks h1{margin-left:280px;
+
+.asks h1 {
+    margin-left: 280px;
     margin-top: 250px;
 }
 
@@ -587,108 +593,112 @@ border: transparent;}
 }
 
 .faqs-container {
-	margin-left:250px;
-	max-width: 1400px;
+    margin-left: 250px;
+    max-width: 1400px;
 }
 
 .faq {
-	background-color: transparent;
+    background-color: transparent;
     border-style: solid;
     border-width: 1px 0px 0px 0px;
-	border-color:  #9FA4A8;
-	padding: 30px;
-	position: relative;
-	overflow: hidden;
-	margin: 0px 0;
-	transition: 0.3s ease;
+    border-color: #9FA4A8;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0;
+    transition: 0.3s ease;
 }
-.faq:last-of-type{border-width: 1px 0px 1px 0px;}
+
+.faq:last-of-type {
+    border-width: 1px 0px 1px 0px;
+}
 
 .faq.active {
-	background-color: #fff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.faq.active::after, .faq.active::before {
-	color:  #333;
-	content: '\f075';
-	font:normal 22px Raleway;
-	position: absolute;
-	opacity: 0.2;
-	top: 20px;
-	left: 20px;
-	z-index: 0;
+.faq.active::after,
+.faq.active::before {
+    color: #333;
+    content: '\f075';
+    font: normal 22px Raleway;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
 
 .faq.active::before {
-	color: #3498db;
-	top: -10px;
-	left: -30px;
-	transform: rotateY(180deg);
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
 }
 
 .faq-title {
-    font:normal 22px Raleway;
-    color:#333;
-	margin: 0 35px 0 0;
+    font: normal 22px Raleway;
+    color: #333;
+    margin: 0 35px 0 0;
 }
 
 .faq-text {
-	display: none;
-	margin: 30px 0 0;
-    font:normal 18px Montserrat;
-    color:#000;
+    display: none;
+    margin: 30px 0 0;
+    font: normal 18px Montserrat;
+    color: #000;
 }
 
 .faq.active .faq-text {
-	display: block;
+    display: block;
 }
 
 .faq-toggle {
-    
-    width:50px;
-    height:50px;
+
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	height: 30px;
-	width: 30px;
-    border:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    border: transparent;
     background:
-    linear-gradient(#000,#000),
-    linear-gradient(#000,#000);
-  background-position:center;
-  background-size: 50% 2px,2px 50%; 
-  background-repeat:no-repeat;
+        linear-gradient(#000, #000),
+        linear-gradient(#000, #000);
+    background-position: center;
+    background-size: 50% 2px, 2px 50%;
+    background-repeat: no-repeat;
 }
 
 .faq-toggle:focus {
-	outline: none;
+    outline: none;
 }
 
 .faq.active .faq-toggle {
-	background-color: #9FA4A8;
+    background-color: #9FA4A8;
 }
 
 .faq-toggle .fa-times {
-	display: none;
+    display: none;
 }
 
 .faq.active .faq-toggle .fa-times {
-	display: block;
+    display: block;
 }
 
 .faq-toggle .fa-chevron-down {
-	color: #83888E;
+    color: #83888E;
 }
 
 .faq.active .faq-toggle .fa-chevron-down {
-	display: none;
+    display: none;
 }
 
 
@@ -700,21 +710,28 @@ border: transparent;}
     border: 0.1px solid transparent;
     border-radius: 20px;
     color: #fff;
-   
+
 }
-#okno .forma{width:680px;
-height:50px;
-border:solid 1px #C0C2D7;
-border-radius: 20px;
-margin-top:30px;
-font:normal 18px Raleway;
-color:#C0C2D7;}
+
+#okno .forma {
+    width: 680px;
+    height: 50px;
+    border: solid 1px #C0C2D7;
+    border-radius: 20px;
+    margin-top: 30px;
+    font: normal 18px Raleway;
+    color: #C0C2D7;
+}
 
 #okno:target {
     display: block;
 }
-.contacts a{text-decoration: none;
-    color:#fff;}
+
+.contacts a {
+    text-decoration: none;
+    color: #fff;
+}
+
 #main {
     display: none;
     position: absolute;
@@ -778,7 +795,7 @@ color:#C0C2D7;}
 
 }
 
-.ostav {
+.b-container button {
     font: normal 18px Montserrat;
     color: white;
     width: 280px;
@@ -788,6 +805,79 @@ color:#C0C2D7;}
     background-color: #F4683F;
     margin-top: 60px;
     margin-left: 380px;
+}
+
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+.b-popup .b-popup-content {
+    margin: 40px auto 0px auto;
+    width: 550px;
+    height: 564px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.b-popup .b-popup-content h2 {
+    font: normal 35px Raleway;
+    color: #333;
+    margin-top: 82px;
+    margin-left: 60px;
+}
+
+.b-popup .b-popup-content h3 {
+    font: normal 18px Montserrat;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+
+.b-popup .b-popup-content .inputform {
+    width: 430px;
+    height: 50px;
+    border-radius: 250px;
+    border: 1px solid #C0C2D7;
+    background: #FFF;
+    padding-left: 15px;
+}
+
+.b-popup .b-popup-content .inputform:first-of-type {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.b-popup .b-popup-content .inputform:last-of-type {
+    margin-left: 60px;
+}
+
+.b-popup .b-popup-content button {
+    font: normal 18px Montserrat;
+    color: white;
+    width: 430px;
+    height: 50px;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.b-popup .b-popup-content a {
+    font: normal 14px Montserrat;
+    color: #333;
+    margin-left: 60px;
+    margin-top: 160px;
 }
 
 .bottom {
