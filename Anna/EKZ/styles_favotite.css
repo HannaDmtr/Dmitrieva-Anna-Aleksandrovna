@@ -1,0 +1,415 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+.header {
+    background-color: white;
+    height: 121.5px;
+    border: solid 1px #C0C2D7;
+    border-right: 0px;
+    overflow: visible;
+
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1920px;
+
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -290px;
+    margin-right: -240px;
+}
+
+.menu .logo {
+    width: 547px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .logo div img[src*='Vector'] {
+    position: relative;
+    margin-top: 43px;
+}
+
+.menu .logo div img[src*='Union1'] {
+    position: relative;
+    height: 23.5px;
+    left: 50px;
+    top: -32px
+}
+
+.menu .logo div.Kazan {
+    margin-top: 51px;
+    margin-left: 90px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.Kazan img[src*='vector1'] {
+    margin-top: 6px;
+    vertical-align: -3px;
+}
+
+.Kazan a {
+    position: relative;
+    left: 18px;
+    top: -23px;
+}
+
+.Kazan img[src*='arrow down'] {
+    position: relative;
+    left: 88px;
+    top: -44px;
+}
+
+.ctlg {
+    margin-top: 46px;
+    margin-left: 62px;
+}
+
+.ctlg button {
+    width: 136px;
+    height: 40px;
+    font: normal 18px Montserrat;
+    color: white;
+    border: transparent;
+    border-radius: 200px;
+    background-color: #F4683F;
+}
+
+.questions {
+    margin-left: 135px;
+    margin-top: 55px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.questions a {
+    margin-right: 10px;
+}
+
+.contacts {
+    margin-left: 130px;
+    margin-top: 50px;
+    font: normal 18px Montserrat;
+    font-weight: 600px;
+    color: #333333;
+}
+
+.contacts img[src*='heart2'] {
+    position: relative;
+    top: 6px;
+    color: #333333;
+}
+
+.contacts img[src*='search1'] {
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+
+.contacts a {
+    position: relative;
+    left: 34px;
+    top: 6px
+}
+
+.contacts img[src*='tel1'] {
+    position: relative;
+    left: 74px;
+    top: 4px;
+}
+
+.contacts a.number {
+    text-decoration: none;
+    color: #333333;
+    position: relative;
+    left: 82px;
+}
+
+.ss {
+    width: 256px;
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 250px;
+}
+
+.ss img[src*="inst"] {
+    position: relative;
+    top: 0.5px;
+    left: 23px
+}
+
+.ss img[src*="logo_vk"] {
+    position: relative;
+    left: 46px;
+}
+
+.ss img[src*="whatsapp"] {
+    position: relative;
+    top: 1px;
+    left: 69px;
+}
+
+.ss img[src*="telegram"] {
+    position: relative;
+    left: 92px;
+    top: 6px;
+}
+
+.cards h1 {
+    margin-top: 50.5px;
+    margin-bottom: 50px;
+    margin-left: -60px;
+    font: normal 40px Raleway;
+    color: #333;
+}
+
+.cards .podbor {
+    width: 158px;
+    height: 40px;
+    border: transparent;
+    border-radius: 200px;
+    background: var(--active, #F4683F);
+    font: normal 18px Montserrat;
+    color: #FFF;
+    margin-left: 1180px;
+    margin-top: -85px;
+}
+
+.cards img {
+    float: left
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.days li {
+    margin-bottom: 18px;
+    font: normal 18px Raleway;
+    color: #333;
+}
+
+.days li h4 {
+    margin-bottom: 5px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card3 img[src*='circle3'] {
+    position: relative;
+    left: -325px;
+}
+
+
+.card3 img[src*='arrow left'] {
+    position: relative;
+    top: 140px;
+    Left: -395px;
+}
+
+.card3 img[src*='arrow right'] {
+    position: relative;
+    top: 140px;
+    left: -153px;
+
+}
+
+.card3 img[src*='b35.png'] {
+    position: relative;
+    top: 30px;
+    left: 288px;
+    border-radius: 150px;
+    border: 1px solid #C0C2D7;
+
+}
+
+.card3 h3 {
+    font: normal 24px Raleway;
+    color: #333;
+    padding-top: 40px;
+    margin-left: 360px;
+}
+
+.card3 .naim {
+    position: relative;
+    left: -45px;
+    top: -6px;
+}
+
+.card3 h2 {
+    font: normal 16px Montserrat;
+    color: #333;
+    position: relative;
+    left: -45px;
+}
+
+
+.card3 {
+    margin-top: 50px;
+    margin-left: -60px;
+    width: 880px;
+    height: 300px;
+    box-shadow: 0px 4px 80px 0px rgba(5, 9, 22, 0.08);
+
+}
+
+.card3 .descr {
+    list-style-type: none;
+    margin-left: 330px;
+    margin-top: 30px;
+
+}
+
+.card3 .descr li {
+    margin-top: 13px;
+    font: normal 16px Montserrat;
+    color: #727488;
+}
+
+.card3 .descr li img {
+    margin-right: 13px;
+}
+
+.card3 .descr li img[src*="entertainment"] {
+    padding-right: 3px;
+}
+
+.card3 .descr li img[src*="flower"] {
+    padding-right: 4px;
+    padding-left: 1px;
+
+}
+
+.card3 .descr li img[src*="waterpool"] {
+    padding-left: 1px;
+    padding-top: 2px;
+}
+
+.card3 img[src*="line2"] {
+    position: relative;
+    top: -135px;
+    left: 270px;
+}
+
+.card3 .days {
+    float: right;
+    column-count: 2;
+    list-style-type: none;
+    margin-top: -128px;
+    margin-right: 45px;
+}
+
+.card3.days li {
+    margin-bottom: 18px;
+    font: normal 18px Raleway;
+    color: #333;
+}
+
+.card3.days li h4 {
+    margin-bottom: 5px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card3 div.map h4 {
+    position: relative;
+    left: 288px;
+    top: 8px;
+    font: normal 14px Montserrat;
+    color: #727488;
+}
+
+.card3 div.map h3 {
+    position: relative;
+    left: 397px;
+    top: -57px;
+    font: normal 14px Montserrat;
+    color: #F4683F
+}
+
+.footer {
+    background: linear-gradient(180deg, #161723 0%, #161723 100%);
+    background-size: cover;
+    height: 350px;
+    margin-right: -130px;
+    margin-top: 280px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 78px;
+    padding-right: 280px;
+}
+
+.bottom .logo1 {
+    margin-top: 78px;
+    margin-left: -180px;
+}
+
+.bottom img[src*='Vector'] {
+    margin-right: 9.28px;
+    vertical-align: -11px;
+}
+
+.bottom h4 {
+    font: normal 14px Montserrat;
+    color: #404256;
+    margin-bottom: 10px;
+}
+
+.bottom h4:first-of-type {
+    margin-top: 128px;
+}
+
+.bottom ul {
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 100px;
+    margin-top: 90px;
+    margin-bottom: -5px;
+    font: normal 22px Raleway;
+    color: white;
+    list-style-type: none;
+}
+
+.bottom ul li {
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+    margin-bottom: 12px;
+}
+
+.bottom ul li:first-of-type {
+    margin-top: 17px
+}
+
+.call {
+    margin-top: 90px;
+    font: normal 16px Montserrat;
+    color: #C0C2D7;
+}
+
+.call img[src*='tel'] {
+    margin-right: 7px;
+    vertical-align: -1px;
+}
+
+.call .ss {
+    color: #C0C2D7;
+    margin-left: -60px;
+    margin-top: 144px
+}

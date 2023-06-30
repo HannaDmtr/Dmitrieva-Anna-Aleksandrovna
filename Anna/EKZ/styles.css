@@ -116,6 +116,7 @@ visibility: visible;
 .contacts img[src*='heart'] {
     position: relative;
     top: 4px;
+    left: -20px;
 }
 
 .contacts img[src*='search'] {
@@ -161,7 +162,8 @@ border: transparent;}
 
 .item{
     background-color: transparent;
-    width:260px;
+    width:220px;
+    height:200px;
 }
 .zagolovok1 {
     font: normal 60px Raleway;
@@ -576,33 +578,119 @@ border: transparent;}
 .asks {
     margin-top: 250px;
 }
+.asks h1{margin-left:280px;
+    margin-top: 250px;
+}
 
 .asks div:first-of-type {
     margin-top: 80px;
 }
 
-.asks div {
-    width: 1400px;
-    height: 90px;
-    margin-left: 260px;
-    border: solid 1px;
-    border-color: #C0C2D7 transparent transparent transparent;
-    font: normal 22px Raleway;
-    font-weight: 800;
-    color: #333333;
-    padding-top: 33px;
+.faqs-container {
+	margin-left:250px;
+	max-width: 1400px;
 }
 
-.asks div img {
-    float: right;
-    margin-right: 30px;
-    margin-top: 6px;
+.faq {
+	background-color: transparent;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+	border-color:  #9FA4A8;
+	padding: 30px;
+	position: relative;
+	overflow: hidden;
+	margin: 0px 0;
+	transition: 0.3s ease;
+}
+.faq:last-of-type{border-width: 1px 0px 1px 0px;}
+
+.faq.active {
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.asks div:last-of-type {
-    border: solid 1px;
-    border-color: #C0C2D7 transparent #C0C2D7 transparent;
+.faq.active::after, .faq.active::before {
+	color:  #333;
+	content: '\f075';
+	font:normal 22px Raleway;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
 }
+
+.faq.active::before {
+	color: #3498db;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+
+.faq-title {
+    font:normal 22px Raleway;
+    color:#333;
+	margin: 0 35px 0 0;
+}
+
+.faq-text {
+	display: none;
+	margin: 30px 0 0;
+    font:normal 18px Montserrat;
+    color:#000;
+}
+
+.faq.active .faq-text {
+	display: block;
+}
+
+.faq-toggle {
+    
+    width:50px;
+    height:50px;
+    cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+    border:transparent;
+    background:
+    linear-gradient(#000,#000),
+    linear-gradient(#000,#000);
+  background-position:center;
+  background-size: 50% 2px,2px 50%; 
+  background-repeat:no-repeat;
+}
+
+.faq-toggle:focus {
+	outline: none;
+}
+
+.faq.active .faq-toggle {
+	background-color: #9FA4A8;
+}
+
+.faq-toggle .fa-times {
+	display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+	display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+	color: #83888E;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
+
 
 .okno {
     width: 600px;
@@ -637,25 +725,27 @@ color:#C0C2D7;}
 }
 
 #okno {
-    width: 1000px;
-    height: 139px;
+    width: 791px;
+    height: 110px;
     text-align: center;
-    padding: 15px;
+    padding-top: 2px;
     border: transparent;
     background-color: #fff;
     border-radius: 20px;
     color: #fff;
     position: absolute;
-    top: -885px;
-    right: -491px;
+    top: -596px;
+    right: -508px;
     bottom: 0;
-    left: 0;
+    left: 50px;
     margin: auto;
 }
 
 #main:target {
     display: block;
 }
+
+
 
 .footer {
     background: url('img/bg_photo2.png') no-repeat;
