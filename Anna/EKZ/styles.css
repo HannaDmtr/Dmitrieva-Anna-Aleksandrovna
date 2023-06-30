@@ -156,7 +156,7 @@ border: transparent;}
 .owl-carousel{margin-top:80px;
     padding-right:150px;
     padding-left:260px}
-.owl-carousel .owl-stage-outer {width:1000px;}
+.owl-carousel .owl-stage-outer {width:900px;}
 
 
 .item{
@@ -227,7 +227,7 @@ border: transparent;}
 .about {
     padding-right: 320px;
     position: relative;
-    margin-top: 260px;
+    margin-top: 170px;
 }
 
 .about h1 {
