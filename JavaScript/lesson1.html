@@ -8,16 +8,21 @@
 </head>
 
 <body>
-    
-<script>
-    let width=prompt("Введите ширину прямоугольника");
-    let length=prompt("Введите длину прямоугольника");
-    let square=(width * length);
-    console.log("Площадь прямоугольника равна" + " " + square)
-    let prmt=(2* (Number(width) + Number(length)));
-    console.log("Периметр прямоугольника равен" + " " + prmt)
-    
-</script>
+
+    <script>
+        let width = prompt("Введите ширину прямоугольника");
+        let length = prompt("Введите длину прямоугольника");
+
+        if (width === length) {
+            console.log("Перед нами квадрат")
+        }
+
+        let square = (width * length);
+        console.log("Площадь фигуры равна" + " " + square)
+        let prmt = (2 * (Number(width) + Number(length)));
+        console.log("Периметр фигуры равен" + " " + prmt)
+
+    </script>
 
 </body>
 
