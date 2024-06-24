@@ -8,8 +8,8 @@
 </head>
 
 <body>
-
-    <script>
+    
+<script>
         let month = prompt("Какой сейчас по счету месяц?");
         parseInt(month);
         if (month == 12 || month >= 1 && month <= 2) {
@@ -22,7 +22,23 @@
             console.log("Сейчас осень");}
             else{console.log("Неверно введенное значение")}
 
-    </script>
+</script>
+
+ <script>
+      
+let Month = prompt('Какой сейчас по счету месяц?', 9);
+
+  let message = (Month<1) ? 'Неверно введенное значение' :
+  (Month< 3) ? 'Сейчас зима' :
+  (Month <= 5) ? 'Сейчас весна' :
+  (Month <= 8) ? 'Сейчас лето' :
+  (Month <= 11) ? 'Сейчас осень' :
+  (Month == 12) ? 'Сейчас зима' :
+  'Неверно введенное значение';
+
+    alert( message );
+
+</script>
 
 </body>
 
