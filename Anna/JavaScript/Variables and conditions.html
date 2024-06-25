@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let width = prompt("Введите ширину прямоугольника");
+      let length = prompt("Введите длину прямоугольника");
+
+      if (width === length) {
+        console.log("Перед нами квадрат");
+      }
+
+      let square = width * length;
+      console.log("Площадь фигуры равна" + " " + square);
+      let prmt = 2 * (Number(width) + Number(length));
+      console.log("Периметр фигуры равен" + " " + prmt);
+    </script>
+
+    <script>
+      let month = prompt("Какой сейчас по счету месяц?");
+      parseInt(month);
+      if (month == 12 || (month >= 1 && month <= 2)) {
+        console.log("Сейчас зима");
+      } else if (month >= 3 && month <= 5) {
+        console.log("Сейчас весна");
+      } else if (month >= 6 && month <= 8) {
+        console.log("Сейчас лето");
+      } else if (month >= 9 && month <= 11) {
+        console.log("Сейчас осень");
+      } else {
+        console.log("Неверно введенное значение");
+      }
+    </script>
+
+    <script>
+      let Month = prompt("Какой сейчас по счету месяц?", 9);
+
+      let message =
+        Month < 1
+          ? "Неверно введенное значение"
+          : Month < 3
+          ? "Сейчас зима"
+          : Month <= 5
+          ? "Сейчас весна"
+          : Month <= 8
+          ? "Сейчас лето"
+          : Month <= 11
+          ? "Сейчас осень"
+          : Month == 12
+          ? "Сейчас зима"
+          : "Неверно введенное значение";
+
+      alert(message);
+    </script>
+
+    <script>
+      let num = prompt("Введите любое число");
+      if (num > 0) {
+        console.log("Число положительное");
+      } else if (num < 0) {
+        console.log("Число отрицательное");
+      } else {
+        console.log("Это ноль");
+      }
+      if (num % 1 == 0 || num == 0) {
+        console.log("Число целое");
+        if (num % 2 == 0 || num == 0) {
+          console.log("Число четное");
+        } else {
+          console.log("Число нечетное");
+        }
+      } else {
+        console.log("Число дробное");
+      }
+    </script>
+  </body>
+</html>
