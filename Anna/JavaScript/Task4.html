@@ -8,11 +8,40 @@
 
   <body>
     <script>
-let i = 1;
-while (i<9) { 
-console.log(i="|" + "_");
-i++; 
-}
+      let i = 1;
+      let triangle = "";
+
+      while (i <= 9) {
+        let line = "";
+        let innerI = 0;
+        while (innerI < i) {
+          line += "|_";
+          innerI++;
+        }
+        triangle += line + "\n";
+        i++;
+      }
+      console.log(triangle);
+    </script>
+
+    <script>
+      const BLACK = "\u2B1C";
+      const WHITE = "\u2B1B";
+
+      let n = 8;
+      let res = "";
+
+      for (let q = 0; q < n; ++q) {
+        let line = "";
+
+        for (let w = 0; w < n; ++w) {
+          line += (q + w) & 1 ? BLACK : WHITE;
+        }
+
+        res += line + "\n";
+      }
+
+      console.log(res);
     </script>
   </body>
 </html>
