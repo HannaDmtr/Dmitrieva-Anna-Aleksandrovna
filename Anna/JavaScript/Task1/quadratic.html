@@ -7,21 +7,32 @@
   </head>
   <body>
     <script>
-        function quadraticEquation(a, b, c) {
-            let discriminant = b * b - 4 * a * c;
-            if (discriminant < 0) {
-                console.log(`Уравнение ${a}x^2 ${b < 0 ? '- ' + Math.abs(b) : '+ ' + b}x ${c < 0 ? '- ' + Math.abs(c) : '+ ' + c} = 0 не имеет вещественных корней`);
-            } else if (discriminant === 0) {
-                let x = -b / (2 * a);
-                console.log(`уравнение ${a}x^2 ${b < 0 ? '- ' + Math.abs(b) : '+ ' + b}x ${c < 0 ? '- ' + Math.abs(c) : '+ ' + c} = 0 имеет один корень x = ${x}`);
-            } else {
-                let x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-                let x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-                console.log(`уравнение ${a}x^2 ${b < 0 ? '- ' + Math.abs(b) : '+ ' + b}x ${c < 0 ? '- ' + Math.abs(c) : '+ ' + c} = 0 имеет корни x1 = ${x1} и x2 = ${x2}`);
-            }
+      function quadraticEquation(a, b, c) {
+        let discriminant = b * b - 4 * a * c;
+        if (discriminant < 0) {
+          console.log(
+            `Уравнение ${a}x^2 ${b < 0 ? "- " + Math.abs(b) : "+ " + b}x ${
+              c < 0 ? "- " + Math.abs(c) : "+ " + c
+            } = 0 не имеет вещественных корней`
+          );
+        } else if (discriminant === 0) {
+          let x = -b / (2 * a);
+          console.log(
+            `уравнение ${a}x^2 ${b < 0 ? "- " + Math.abs(b) : "+ " + b}x ${
+              c < 0 ? "- " + Math.abs(c) : "+ " + c
+            } = 0 имеет один корень x = ${x}`
+          );
+        } else {
+          let x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+          let x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+          console.log(
+            `уравнение ${a}x^2 ${b < 0 ? "- " + Math.abs(b) : "+ " + b}x ${
+              c < 0 ? "- " + Math.abs(c) : "+ " + c
+            } = 0 имеет корни x1 = ${x1} и x2 = ${x2}`
+          );
         }
-        quadraticEquation(-1, -1, -1);
-       
+      }
+      quadraticEquation(-1, -1, -1);
     </script>
   </body>
 </html>

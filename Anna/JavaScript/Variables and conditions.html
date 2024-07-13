@@ -8,32 +8,24 @@
 
   <body>
     <script>
-      let width = prompt("Введите ширину прямоугольника");
-      let length = prompt("Введите длину прямоугольника");
+      let width = prompt("Введите ширину прямоугольника:");
+      let length = prompt("Введите длину прямоугольника:");
 
-      if (width === length) {
-        console.log("Перед нами квадрат");
-      }
+      width = Number(width);
+      length = Number(length);
 
-      let square = width * length;
-      console.log("Площадь фигуры равна" + " " + square);
-      let prmt = 2 * (Number(width) + Number(length));
-      console.log("Периметр фигуры равен" + " " + prmt);
-    </script>
+      if (width > 0 && length > 0) {
+        let area = width * length;
+        let perimeter = 2 * (width + length);
 
-    <script>
-      let month = prompt("Какой сейчас по счету месяц?");
-      parseInt(month);
-      if (month == 12 || (month >= 1 && month <= 2)) {
-        console.log("Сейчас зима");
-      } else if (month >= 3 && month <= 5) {
-        console.log("Сейчас весна");
-      } else if (month >= 6 && month <= 8) {
-        console.log("Сейчас лето");
-      } else if (month >= 9 && month <= 11) {
-        console.log("Сейчас осень");
+        console.log(`Площадь прямоугольника: ${area}`);
+        console.log(`Периметр прямоугольника: ${perimeter}`);
+
+        if (width === length) {
+          console.log("Перед нами квадрат.");
+        }
       } else {
-        console.log("Неверно введенное значение");
+        console.log("Ширина и длина должны быть положительными числами.");
       }
     </script>
 
@@ -60,23 +52,30 @@
 
     <script>
       let num = prompt("Введите любое число");
+      num = Number(num);
+      let isEven, isInteger, isPositive;
+
+      if (num % 2 === 0) {
+        isEven = "четное";
+      } else {
+        isEven = "нечетное";
+      }
+
+      if (Number.isInteger(num)) {
+        isInteger = "целое";
+      } else {
+        isInteger = "дробное";
+      }
+
       if (num > 0) {
-        console.log("Число положительное");
+        isPositive = "положительное";
       } else if (num < 0) {
-        console.log("Число отрицательное");
+        isPositive = "отрицательное";
       } else {
-        console.log("Это ноль");
+        isPositive = "нулевое";
       }
-      if (num % 1 == 0 || num == 0) {
-        console.log("Число целое");
-        if (num % 2 == 0 || num == 0) {
-          console.log("Число четное");
-        } else {
-          console.log("Число нечетное");
-        }
-      } else {
-        console.log("Число дробное");
-      }
+
+      console.log(`Число ${num} ${isEven}, ${isInteger} и ${isPositive}.`);
     </script>
   </body>
 </html>
