@@ -6,10 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-  
     <script>
-       for(i=1; i<101;i++){
-       console.log((i%3?'':'Fizz')+(i%5?'':'Buzz')||i)}
+function fizzBuzz() {
+    let i = 1;
+    let result = ["", "Fizz", "Buzz", "FizzbBuzz"];
+
+    while (i <= 100) {
+        console.log(result[(i % 3 === 0) + 2 * (i % 5 === 0)] || i);
+        i++;
+    }
+}
+
+fizzBuzz();
+
     </script>
   </body>
 </html>
