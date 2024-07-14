@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>countVowels</title>
+  </head>
+  <body>
+    <script>
+      function countVowelLetters(input) {
+        const vowels = ["а","е","ё","и","о","у","ы","э","ю","я","А","Е","Ё","И","О","У","Ы","Э", "Ю","Я",];
+        let count = 0;
+
+        for (let symbol of input) {
+          if (vowels.includes(symbol)) {
+            count++;
+          }
+        }
+
+        console.log(`Количество гласных = ${count}`);
+      }
+      countVowelLetters("кенгуру");
+      countVowelLetters("йогурт");
+      countVowelLetters("обезьяна");
+    </script>
+  </body>
+</html>

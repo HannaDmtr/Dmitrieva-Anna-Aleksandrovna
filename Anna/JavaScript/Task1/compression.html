@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compression</title>
+  </head>
+  <body>
+    <script>
+      function compress(input) {
+        let output = "";
+        let count = 1;
+        for (let i = 0; i < input.length; i++) {
+          if (input[i] === input[i + 1]) {
+            count++;
+          } else {
+            output += input[i] + (count > 1 ? count : "");
+            count = 1;
+          }
+        }
+        return output;
+      }
+
+      function uncompress(input) {
+        let output = "";
+        let i = 0;
+        while (i < input.length) {
+          let char = input[i];
+          let num = "";
+          while (!isNaN(input[i + 1])) {
+            num += input[i + 1];
+            i++;
+          }
+          output += char.repeat(num ? parseInt(num) : 1);
+          i++;
+        }
+        return output;
+      }
+
+      console.log(`"aaa" => "${compress("aaa")}"`);
+      console.log(`"a2b3" => "${uncompress("a2b3")}"`);
+     
+    </script>
+  </body>
+</html>
