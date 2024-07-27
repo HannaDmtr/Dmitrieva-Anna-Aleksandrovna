@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pow and Calculate</title>
+</head>
+<body>
+    <script>
+       
+            function pow(x) {
+            return function(y) {
+                if (y===0) return 1; 
+                if (y > 0) return x * pow(x)(y - 1);
+                if (y < 0) return 1 / pow(x)(-y); 
+            };
+        }
+
+        function calculate(a) {
+            return function(sign) {
+                return function(b) {
+                    let result;
+                    switch (sign) {
+                        case '+':
+                            result = a + b;
+                            break;
+                        case '-':
+                            result = a - b;
+                            break;
+                        case '*':
+                            result = a * b;
+                            break;
+                        case '/':
+                            if (b === 0) {
+                                console.log("Ошибка (на ноль делить нельзя)");
+                                return;
+                            }
+                            result = a / b;
+                            break;
+                        default:
+                            console.log("Неизвестная операция");
+                            return;
+                    }
+                  
+                    console.log(`${a} ${sign} ${b} = ${result}`);
+                };
+            };
+        }
+   //Результаты в консоли
+            console.log(`${-2}^${3} = ${pow(-2)(3)}`);
+            calculate(1)("+")(2);
+            console.log(`${4}^${2} = ${pow(4)(2)}`);
+            calculate(3)("*")(7);
+            console.log(`${16}^${0} = ${pow(16)(0)}`);
+            calculate(15)("/")(3);
+            console.log(`${2}^${-3} = ${pow(2)(-3)}`);
+            calculate(2)("/")(0);
+        
+   
+    </script>
+</body>
+</html>
