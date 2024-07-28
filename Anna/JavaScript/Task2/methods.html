@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methods</title>
+  </head>
+  <body>
+    <script>
+      function currentSums(numbers) {
+        const result = [];
+        numbers.reduce((acc, current) => {
+          const sum = acc + current;
+          result.push(sum);
+          return sum;
+        }, 0);
+        return result;
+      }
+      const numbers = [2, 3, 5, 7, 11, 13, 17, 19, 22];
+      const sums = currentSums(numbers);
+      console.log(sums);
+    </script>
+
+    <script>
+      function firstLettersFromString(str) {
+        const words = str.split(" ");
+        const firstLetters = words.map((word) => word.charAt(0));
+
+        return firstLetters;
+      }
+
+      const str = "Каждый охотник желает знать, где сидит фазан";
+      const newArr = firstLettersFromString(str);
+      console.log(newArr);
+    </script>
+
+    <script>
+      function filteredArray(arr) {
+        return arr.filter((num) => Number.isInteger(num) && num > 0);
+      }
+
+      const startArray = [-1, 2, 3.5, -12, 4, 1.25, 16];
+      const newArray = filteredArray(startArray);
+      console.log(newArray);
+    </script>
+
+    <script>
+      function moveZeros(arr) {
+        return arr.sort((a, b) => (a === 0 ? 1 : 0) - (b === 0 ? 1 : 0));
+      }
+
+      const array1 = [false, 1, 0, NaN, 2, 0, null, 3, 4, 0, 5];
+      const array2 = [0, 2, 0, 4, 0, 6];
+      const array3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      console.log(moveZeros(array1)); 
+      console.log(moveZeros(array2)); 
+      console.log(moveZeros(array3)); 
+    </script>
+
+
+    <script>
+      function changeArray(arr) {
+    const midIndex = Math.floor(arr.length / 2); 
+    const leftHalf = arr.slice(0, midIndex);
+    const rightHalf = arr.slice(midIndex + (arr.length % 2)); 
+
+    return rightHalf.concat(arr[midIndex], leftHalf); 
+}
+
+console.log(changeArray([1, 2, 3, 4, 5])); 
+console.log(changeArray([1, 2])); 
+console.log(changeArray([1, 2, 3, 4, 5, 6, 7, 8])); 
+    </script>
+  </body>
+</html>
