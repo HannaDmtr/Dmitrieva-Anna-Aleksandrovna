@@ -7,56 +7,62 @@
 </head>
 <body>
     <script>
-       
-            function pow(x) {
+        function pow(x) {
             return function(y) {
-                if (y===0) return 1; 
-                if (y > 0) return x * pow(x)(y - 1);
-                if (y < 0) return 1 / pow(x)(-y); 
+                function power(base, exp) {
+                    if (exp === 0) return 1;
+                    if (exp < 0) return 1 / power(base, -exp);
+                    return base * power(base, exp - 1);
+                }
+                const result = power(x, y);
+                console.log(`${x}^${y} = ${result}`);
+                return result;
             };
         }
 
         function calculate(a) {
-            return function(sign) {
+            return function(operator) {
                 return function(b) {
                     let result;
-                    switch (sign) {
+
+                    switch (operator) {
                         case '+':
                             result = a + b;
+                            console.log(`${a} + ${b} = ${result}`);
                             break;
                         case '-':
                             result = a - b;
+                            console.log(`${a} - ${b} = ${result}`);
                             break;
                         case '*':
                             result = a * b;
+                            console.log(`${a} * ${b} = ${result}`);
                             break;
                         case '/':
                             if (b === 0) {
-                                console.log("Ошибка (на ноль делить нельзя)");
+                                console.log(`${a} / ${b} = Ошибка (на ноль делить нельзя)`);
                                 return;
                             }
                             result = a / b;
+                            console.log(`${a} / ${b} = ${result}`);
                             break;
                         default:
-                            console.log("Неизвестная операция");
+                            console.log('Неизвестный оператор');
                             return;
                     }
-                  
-                    console.log(`${a} ${sign} ${b} = ${result}`);
+                    return result;
                 };
             };
         }
-   //Результаты в консоли
-            console.log(`${-2}^${3} = ${pow(-2)(3)}`);
-            calculate(1)("+")(2);
-            console.log(`${4}^${2} = ${pow(4)(2)}`);
-            calculate(3)("*")(7);
-            console.log(`${16}^${0} = ${pow(16)(0)}`);
-            calculate(15)("/")(3);
-            console.log(`${2}^${-3} = ${pow(2)(-3)}`);
-            calculate(2)("/")(0);
-        
-   
+
+        pow(-2)(3);
+        calculate(1)("+")(2);
+        pow(4)(2);
+        calculate(3)("*")(7);
+        pow(16)(0);
+        calculate(15)("/") (3);
+        pow(2)(-3);
+        calculate(2)("/") (0);
     </script>
 </body>
 </html>

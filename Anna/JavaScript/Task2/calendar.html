@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 30%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const month = parseInt(prompt("Введите номер месяца (1-12):")) - 1;
+    const year = parseInt(prompt("Введите год:"));
+
+    // Проверяем корректность ввода
+    if (isNaN(month) || isNaN(year) || month < 0 || month > 11) {
+        alert("Некорректный ввод. Пожалуйста, попробуйте снова.");
+    } else {
+        // Создаем новый объект Date
+        const date = new Date(year, month);
+        
+        // Получаем количество дней в месяце
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        // Находим первый день месяца и его номер дня недели (0 - вс, 1 - пн, ..., 6 - сб)
+        let firstDay = date.getDay();
+        if (firstDay === 0) firstDay = 7; // Переделываем воскресенье в 7
+        
+        // Создаем заголовок таблицы
+        const daysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+        let calendar = document.createElement('div');
+        
+        // Заголовок с месяцем и годом
+        let header = document.createElement('h2');
+        header.textContent = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+        calendar.appendChild(header);
+        
+        // Добавляем таблицу
+        let table = document.createElement('table');
+        let headerRow = document.createElement('tr');
+        
+        // Добавляем заголовки дней недели
+        for (let day of daysOfWeek) {
+            let th = document.createElement('th');
+            th.textContent = day;
+            headerRow.appendChild(th);
+        }
+        table.appendChild(headerRow);
+        
+        let bodyRow = document.createElement('tr');
+        
+        // Заполняем пустые ячейки до первого дня месяца
+        for (let i = 1; i < firstDay; i++) {
+            let td = document.createElement('td');
+            bodyRow.appendChild(td);
+        }
+        
+        // Заполняем календарь числами
+        for (let day = 1; day <= daysInMonth; day++) {
+            let td = document.createElement('td');
+            td.textContent = day;
+            bodyRow.appendChild(td);
+            if ((day + firstDay - 1) % 7 === 0 && day !== daysInMonth) {
+                table.appendChild(bodyRow);
+                bodyRow = document.createElement('tr'); // переносим на следующую строку
+            }
+        }
+        
+        // Добавляем последнюю строку, если она непустая
+        if (bodyRow.children.length) {
+            table.appendChild(bodyRow);
+        }
+        
+        // Добавляем таблицу в календарь
+        calendar.appendChild(table);
+        
+        // Добавляем календарь в документ
+        document.body.appendChild(calendar);
+    }
+</script>
+
+</body>
+</html>
