@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <style>
         body {
@@ -39,7 +38,7 @@
         .controls {
             display: flex;
             justify-content: center;
-            margin: -10px 0;
+            margin: -10px 186px;
             align-items: baseline;
         }
 
@@ -61,7 +60,7 @@
 
         h2 {
             margin: 0 5px;
-            font-size: 1.4em;
+            font-size: 1.3em;
             color: #333;
         }
 
@@ -95,50 +94,49 @@
             const daysInMonth = new Date(year, month + 1, 0).getDate();
             let firstDay = date.getDay();
             if (firstDay === 0) firstDay = 7;
-        }
 
-        const daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-        const calendarDiv = document.getElementById("calendar");
-        calendarDiv.innerHTML = "";
+            const daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+            const calendarDiv = document.getElementById("calendar");
+            calendarDiv.innerHTML = "";
 
-        document.getElementById("monthYearDisplay").textContent =
-            date.toLocaleString("default", { month: "long", year: "numeric" });
+            document.getElementById("monthYearDisplay").textContent =
+                date.toLocaleString("default", { month: "long", year: "numeric" });
 
-        let table = document.createElement("table");
-        let headerRow = document.createElement("tr");
+            let table = document.createElement("table");
+            let headerRow = document.createElement("tr");
 
-        for (let day of daysOfWeek) {
-            let th = document.createElement("th");
-            th.textContent = day;
-            headerRow.appendChild(th);
-        }
-        table.appendChild(headerRow);
+            for (let day of daysOfWeek) {
+                let th = document.createElement("th");
+                th.textContent = day;
+                headerRow.appendChild(th);
+            }
+            table.appendChild(headerRow);
 
-        let bodyRow = document.createElement("tr");
+            let bodyRow = document.createElement("tr");
 
-        for (let i = 1; i < firstDay; i++) {
-            let td = document.createElement("td");
-            bodyRow.appendChild(td);
-        }
+            for (let i = 1; i < firstDay; i++) {
+                let td = document.createElement("td");
+                bodyRow.appendChild(td);
+            }
 
-        const today = new Date();
-        const isCurrentMonth =
-            today.getMonth() === month && today.getFullYear() === year;
+            const today = new Date();
+            const isCurrentMonth =
+                today.getMonth() === month && today.getFullYear() === year;
 
-        for (let day = 1; day <= daysInMonth; day++) {
-            let td = document.createElement("td");
-            td.textContent = day;
+            for (let day = 1; day <= daysInMonth; day++) {
+                let td = document.createElement("td");
+                td.textContent = day;
 
-            // выходные или текущий день
-            if ((day + firstDay - 1) % 7 === 6 || (day + firstDay - 1) % 7 === 0) {
-                td.classList.add("weekend");
+                if ((day + firstDay - 2) % 7 === 5 || (day + firstDay - 2) % 7 === 6) {
+                    td.classList.add("weekend");
+                }
 
                 if (isCurrentMonth && day === today.getDate()) {
                     td.classList.add("today");
                 }
 
                 bodyRow.appendChild(td);
-                if ((day + firstDay - 1) % 7 === 0 && day !== daysInMonth) {
+                if ((day + firstDay - 1) % 7 === 0) {
                     table.appendChild(bodyRow);
                     bodyRow = document.createElement("tr");
                 }
