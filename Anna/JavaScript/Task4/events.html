@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Example</title>
+    <style>
+      .valid {
+        border: 2px solid green;
+      }
+      .invalid {
+        border: 2px solid red;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 1px;
+        margin: 5px 10px;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      h2 {
+        color: rgb(26, 15, 66);
+      }
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(26, 15, 66);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ссылки -->
+    <h2>Ссылки</h2>
+    <a
+      href="https://ru.wikipedia.org/wiki/Visual_Studio_Code"
+      title="Первая ссылка"
+      >Первая ссылка</a
+    ><br />
+    <a href="https://ru.wikipedia.org/wiki/DOM" title="Вторая ссылка"
+      >Вторая ссылка</a
+    ><br />
+    <a href="https://ru.wikipedia.org/wiki/JavaScript" title="Третья ссылка"
+      >Третья ссылка</a
+    ><br />
+
+    <script>
+      const links = document.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", function () {
+          this.textContent =
+            this.getAttribute("title") + ` (${this.getAttribute("href")})`;
+          this.removeEventListener("mouseenter", arguments.callee);
+        });
+      });
+    </script>
+    <br />
+
+    <!-- инпуты -->
+    <input type="text" id="input1" placeholder="Input 1" />
+    <input type="text" id="input2" placeholder="Input 2" />
+    <input type="text" id="input3" placeholder="Input 3" />
+
+    <script>
+      const inputs = document.querySelectorAll('input[type="text"]');
+
+      inputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+          if (!input.dataset.logged) {
+            console.log(input.value);
+            input.dataset.logged = true;
+          }
+        });
+      });
+    </script>
+
+    <!-- абзацы -->
+    <h2>Абзацы с числами</h2>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+      paragraphs.forEach((paragraph) => {
+        let hasClicked = false;
+        paragraph.addEventListener("click", function () {
+          if (!hasClicked) {
+            const number = Number(this.innerText);
+            this.innerText = number * number;
+            hasClicked = true;
+          }
+        });
+      });
+    </script>
+
+    <!-- инпуты с проверкой длины -->
+    <h2>Инпуты с проверкой длины</h2>
+    <input type="text" data-length="2" placeholder="2 символа" /><br />
+    <input type="text" data-length="4" placeholder="4 символа" /><br />
+    <input type="text" data-length="5" placeholder="5 символов" /><br />
+
+    <script>
+      const lengthInputs = document.querySelectorAll("input[data-length]");
+      lengthInputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+          const requiredLength = this.getAttribute("data-length");
+          if (this.value.length == requiredLength) {
+            this.classList.add("valid");
+            this.classList.remove("invalid");
+          } else {
+            this.classList.add("invalid");
+            this.classList.remove("valid");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
