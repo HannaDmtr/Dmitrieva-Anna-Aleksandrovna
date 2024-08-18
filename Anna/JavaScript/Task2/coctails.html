@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hash Storage</title>
+    <script src="HashStorage.js"></script>
+    <style> 
+    .btn {
+        display: inline-block;	
+        box-sizing: border-box;
+        padding: 0 25px;
+        margin: 0 15px 15px 0;
+        outline: none;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #444;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        vertical-align: top;
+        transition: box-shadow 0.2s;
+    } </style>
+  </head>
+  
+  <body>
+    <h1>Cocktail Storage</h1>
+    <h1>Коктейли</h1>
+    <button id="addCocktail" class="btn">Ввод рецепта</button>
+    <button id="getCocktail" class="btn">Рецепт напитка</button>
+    <button id="deleteCocktail" class="btn">Удаление рецепта</button>
+    <button id="listCocktails" class="btn">Перечень всех коктейлей</button>
+    <div id="cocktailInfo"></div>
+</body>
+    <script>
+      const coctailsStorage = new HashStorage();
+
+      coctailsStorage.addValue("Маргарита", {
+        alcoholic: true,
+        ingredients: [
+          "Водка Finlandia 50мл",
+          "Кофейный ликер 25мл",
+          "Лед в кубиках 120г",
+        ],
+        recipe:
+          "Наполни стакан кубиками льда доверху, затем налей кофейный ликер 25 мл, водку 50 мл и размешай коктейльной ложкой.",
+      });
+
+      coctailsStorage.addValue("Пеликан", {
+        alcoholic: false,
+        ingredients: [
+          "Гренадин Monin 10мл",
+          "Клубничный сироп Monin 10мл",
+          "Персиковый сок 150мл",
+          "Лимонный сок 15мл",
+          "Банан 110г",
+          "Клубника 50г",
+          "Дробленый лед 60г",
+        ],
+        recipe:
+          "Положи в блендер очищенную и нарезанную половинку банана и клубнику 2 ягоды. Налей лимонный сок 15 мл, гренадин 10 мл, клубничный сироп 10 мл и персиковый сок 150 мл. Добавь в блендер совок дробленого льда и взбей. Перелей в хайбол.",
+      });
+
+      coctailsStorage.addValue("Дайкири", {
+        alcoholic: true,
+        ingredients: [
+          "Белый ром 60мл",
+          "Сахарный сироп 15мл",
+          "Лаймовый сок 30мл",
+          "Лед в кубиках 200г",
+        ],
+        recipe:
+          "Налей в шейкер лаймовый сок, сахарный сироп и белый ром. Добавь кубики льда и взбей. Перелей в хайбол.",
+      });
+
+
+      
+      const cocktailInfoDiv = document.getElementById("cocktailInfo");
+
+      document.getElementById("addCocktail").addEventListener("click", () => {
+        const name = prompt("Введите название напитка:");
+        const alcoholic = confirm("Это алкогольный напиток?");
+        const ingredients = prompt("Введите ингредиенты через запятую:")
+          .split(",")
+          .map((i) => i.trim());
+        const recipe = prompt("Введите рецепт приготовления:");
+
+        coctailsStorage.addValue(name, { alcoholic, ingredients, recipe });
+        alert(`Коктейль "${name}" добавлен!`);
+      });
+
+      document.getElementById("getCocktail").addEventListener("click", () => {
+        const name = prompt("Введите название напитка:");
+        const cocktail = coctailsStorage.getValue(name);
+
+        if (cocktail) {
+          cocktailInfoDiv.innerHTML = `
+            <h2>Коктейль "${name}" (алкогольный: ${
+            cocktail.alcoholic ? "да" : "нет"
+          })</h2>
+            <h3>Необходимые ингредиенты:</h3>
+            <ul>${cocktail.ingredients
+              .map((i) => `<li>${i}</li>`)
+              .join("")}</ul>
+            <h3>Рецепт приготовления:</h3>
+            <p>${cocktail.recipe}</p>
+        `;
+        } else {
+          alert("Коктейль не найден!");
+        }
+      });
+
+      document
+        .getElementById("deleteCocktail")
+        .addEventListener("click", () => {
+          const name = prompt("Введите название напитка для удаления:");
+          if (coctailsStorage.deleteValue(name)) {
+            alert(`Коктейль "${name}" удален!`);
+          } else {
+            alert("Коктейль не найден для удаления!");
+          }
+        });
+
+      document.getElementById("listCocktails").addEventListener("click", () => {
+        const keys = coctailsStorage.getKeys();
+        cocktailInfoDiv.innerHTML =
+          "<h2>Перечень всех коктейлей:</h2>" +
+          keys.map((key) => `<p>${key}</p>`).join("");
+      });
+    </script>
+  </body>
+</html>
