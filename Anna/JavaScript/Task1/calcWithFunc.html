@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcWithFunc</title>
+</head>
+<body>
+    <script>
+        const zero = (fn) => (fn ? fn(0) : 0);
+        const one = (fn) => (fn ? fn(1) : 1);
+        const two = (fn) => (fn ? fn(2) : 2);
+        const three = (fn) => (fn ? fn(3) : 3);
+        const four = (fn) => (fn ? fn(4) : 4);
+        const five = (fn) => (fn ? fn(5) : 5);
+        const six = (fn) => (fn ? fn(6) : 6);
+        const seven = (fn) => (fn ? fn(7) : 7);
+        const eight = (fn) => (fn ? fn(8) : 8);
+        const nine = (fn) => (fn ? fn(9) : 9);
+
+        const plus = (b) => (a) => {
+            const result = a + b;
+            console.log(`Результат: ${a} + ${b} = ${result}`);
+            return result;
+        };
+        
+        const minus = (b) => (a) => {
+            const result = a - b;
+            console.log(`Результат: ${a} - ${b} = ${result}`);
+            return result;
+        };
+        
+        const times = (b) => (a) => {
+            const result = a * b;
+            console.log(`Результат: ${a} * ${b} = ${result}`);
+            return result;
+        };
+        
+        const dividedBy = (b) => (a) => {
+            const result = a / b;
+            console.log(`Результат: ${a} / ${b} = ${result}`);
+            return result;
+        };
+
+        // примеры 
+        seven(times(five())); 
+        four(plus(nine()));  
+        eight(minus(three()));
+        six(dividedBy(two())); 
+    </script>
+</body>
+</html>
