@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quadratic Equation</title>
+  </head>
+  <body>
     <script>
-        function quadraticEquation(a, b, c) {
-            if (a === 0) {
-                console.log("Ошибка: a не может быть равно 0, так как это не квадратное уравнение.");
-                return;
-            }
-
-            const discriminant = b * b - 4 * a * c;
-            let equation = `уравнение `;
-
-            equation += a === 1 ? 'x^2 ' : a === -1 ? '-x^2 ' : `${a}x^2 `;
-            equation += b >= 0 ? '+ ' : '- ';
-            equation += Math.abs(b) === 1 ? 'x ' : `${Math.abs(b)}x `;
-            equation += c >= 0 ? '+ ' : '- ';
-            equation += `${Math.abs(c)} = 0 `;
-
-            if (discriminant < 0) {
-                equation += 'не имеет вещественных корней';
-            } else if (discriminant === 0) {
-                const x = -b / (2 * a);
-                equation += `имеет один корень x = ${x}`;
-            } else {
-                const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-                const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-                equation += `имеет корни x1 = ${x1} и x2 = ${x2}`;
-            }
-
-            console.log(equation);
+      function quadraticEquation(a, b, c) {
+        if (a === 0) {
+          console.log(
+            "Ошибка: a не может быть равно 0, так как это не квадратное уравнение."
+          );
+          return;
         }
 
-        // примеры
-        quadraticEquation(1, -8, 72);
-        quadraticEquation(-1, 12, 36);
-        quadraticEquation(4, -8, 1);
+        const discriminant = b * b - 4 * a * c;
+        let equation = `уравнение `;
+
+        equation += a === 1 ? "x^2 " : a === -1 ? "-x^2 " : `${a}x^2 `;
+        equation += b >= 0 ? "+ " : "- ";
+        equation += Math.abs(b) === 1 ? "x " : `${Math.abs(b)}x `;
+        equation += c >= 0 ? "+ " : "- ";
+        equation += `${Math.abs(c)} = 0 `;
+
+        if (discriminant < 0) {
+          equation += "не имеет вещественных корней";
+        } else if (discriminant === 0) {
+          const x = -b / (2 * a);
+          equation += `имеет один корень x = ${x}`;
+        } else {
+          const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+          const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+          equation += `имеет корни x1 = ${x1} и x2 = ${x2}`;
+        }
+
+        console.log(equation);
+      }
+
+      // примеры
+      quadraticEquation(1, -8, 72);
+      quadraticEquation(-1, 12, 36);
+      quadraticEquation(4, -8, 1);
     </script>
-</head>
-<body>
-</body>
+  </body>
 </html>
