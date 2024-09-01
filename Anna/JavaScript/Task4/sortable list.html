@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable list</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(238, 228, 216);
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        width: 280px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        padding: 0;
+        margin: 5px 0;
+        background-color: #ffffff;
+        border: 2px solid #8d8f68d8;
+        cursor: move;
+        box-sizing: border-box;
+        transition: border-color 0.3s, transform 0.3s;
+        font-weight: 520;
+      }
+
+      .correct {
+        border-color: rgb(99, 219, 99);
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <ul id="sortable-list">
+      <li data-order="1" draggable="true">Красный</li>
+      <li data-order="2" draggable="true">Оранжевый</li>
+      <li data-order="3" draggable="true">Желтый</li>
+      <li data-order="4" draggable="true">Зеленый</li>
+      <li data-order="5" draggable="true">Голубой</li>
+      <li data-order="6" draggable="true">Синий</li>
+      <li data-order="7" draggable="true">Фиолетовый</li>
+    </ul>
+
+    <script>
+      const list = document.getElementById("sortable-list");
+      let draggedItem = null;
+
+      list.addEventListener("dragstart", (event) => {
+        draggedItem = event.target;
+        event.target.style.opacity = 0.5;
+      });
+
+      list.addEventListener("dragend", (event) => {
+        event.target.style.opacity = "";
+      });
+
+      list.addEventListener("dragover", (event) => {
+        event.preventDefault();
+      });
+
+      list.addEventListener("dragenter", (event) => {
+        if (event.target.tagName === "LI") {
+          event.target.style.border = "dashed";
+        }
+      });
+
+      list.addEventListener("dragleave", (event) => {
+        if (event.target.tagName === "LI") {
+          event.target.style.border = "";
+        }
+      });
+
+      list.addEventListener("drop", (event) => {
+        event.preventDefault();
+        if (event.target.tagName === "LI" && event.target !== draggedItem) {
+          event.target.style.border = "";
+          list.insertBefore(draggedItem, event.target.nextSibling);
+          checkOrder();
+        }
+      });
+
+      function checkOrder() {
+        const items = Array.from(list.children);
+        const correctOrder = items.every((item, index) => {
+          return parseInt(item.getAttribute("data-order")) === index + 1;
+        });
+
+        items.forEach((item) => {
+          if (correctOrder) {
+            item.classList.add("correct");
+          } else {
+            item.classList.remove("correct");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
