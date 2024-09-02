@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аналоговые часы</title>
+    <style>
+      :root {
+        --clock-size: 300px;
+        --circle-color: rgb(32, 196, 81);
+        --hand-color: black;
+        --circle-size: 35px;
+        --font-color: white;
+        --clock-bg-color: rgb(228, 178, 40);
+        --number-offset: 20px;
+        --clock-border-color: gray;
+        --clock-border-width: 4px;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+
+      .clock {
+        position: relative;
+        width: var(--clock-size);
+        height: var(--clock-size);
+        border-radius: 50%;
+        background-color: var(--clock-bg-color);
+        border: var(--clock-border-width) solid var(--clock-border-color);
+      }
+
+      .hand {
+        position: absolute;
+        background-color: var(--hand-color);
+        transform-origin: bottom;
+      }
+
+      .hour {
+        width: 6px;
+        height: 50px;
+        left: calc(50% - 3px);
+        bottom: 50%;
+        z-index: 3;
+      }
+
+      .minute {
+        width: 4px;
+        height: 70px;
+        left: calc(50% - 2px);
+        bottom: 50%;
+        z-index: 2;
+      }
+
+      .second {
+        width: 2px;
+        height: 90px;
+        left: calc(50% - 1px);
+        bottom: 50%;
+        z-index: 1;
+      }
+
+      .number {
+        position: absolute;
+        width: var(--circle-size);
+        height: var(--circle-size);
+        background-color: var(--circle-color);
+        color: var(--font-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock" id="clock"></div>
+
+    <script>
+      const CLOCK_SIZE = 300;
+      const CIRCLE_SIZE = 30;
+      const NUMBERS_COUNT = 12;
+
+      const clockElement = document.getElementById("clock");
+
+      function createNumbers() {
+        for (let i = 0; i < NUMBERS_COUNT; i++) {
+          const numberElement = document.createElement("div");
+          numberElement.className = "number";
+          numberElement.innerText = i === 0 ? 12 : i;
+
+          const angle = (i / NUMBERS_COUNT) * 2 * Math.PI - Math.PI / 2;
+
+          const x =
+            (CLOCK_SIZE / 2 -
+              CIRCLE_SIZE / 2 -
+              parseFloat(
+                getComputedStyle(document.documentElement).getPropertyValue(
+                  "--number-offset"
+                )
+              )) *
+              Math.cos(angle) +
+            (CLOCK_SIZE / 2 - CIRCLE_SIZE / 2);
+          const y =
+            (CLOCK_SIZE / 2 -
+              CIRCLE_SIZE / 2 -
+              parseFloat(
+                getComputedStyle(document.documentElement).getPropertyValue(
+                  "--number-offset"
+                )
+              )) *
+              Math.sin(angle) +
+            (CLOCK_SIZE / 2 - CIRCLE_SIZE / 2);
+
+          numberElement.style.left = `${x}px`;
+          numberElement.style.top = `${y}px`;
+
+          clockElement.appendChild(numberElement);
+        }
+      }
+
+      function updateClock() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes() + seconds / 60;
+        const hours = (now.getHours() % 12) + minutes / 60;
+
+        const secondHand = document.querySelector(".second");
+        const minuteHand = document.querySelector(".minute");
+        const hourHand = document.querySelector(".hour");
+
+        secondHand.style.transform = `rotate(${seconds * 6 + 90}deg)`;
+        minuteHand.style.transform = `rotate(${minutes * 6 + 90}deg)`;
+        hourHand.style.transform = `rotate(${hours * 30 + 90}deg)`;
+      }
+
+      createNumbers();
+
+      const hourHand = document.createElement("div");
+      hourHand.className = "hand hour";
+      clockElement.appendChild(hourHand);
+
+      const minuteHand = document.createElement("div");
+      minuteHand.className = "hand minute";
+      clockElement.appendChild(minuteHand);
+
+      const secondHand = document.createElement("div");
+      secondHand.className = "hand second";
+      clockElement.appendChild(secondHand);
+
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </body>
+</html>
