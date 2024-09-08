@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Clock</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const SVG_WIDTH = 300;
+      const SVG_HEIGHT = 300;
+      const CENTER_X = SVG_WIDTH / 2;
+      const CENTER_Y = SVG_HEIGHT / 2;
+      const RADIUS = 120;
+      const HOUR_LENGTH = 40;
+      const MINUTE_LENGTH = 60;
+      const SECOND_LENGTH = 75;
+
+      function createClock() {
+        const svg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg"
+        );
+        svg.setAttribute("width", SVG_WIDTH);
+        svg.setAttribute("height", SVG_HEIGHT);
+
+        const circle = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle"
+        );
+        circle.setAttribute("cx", CENTER_X);
+        circle.setAttribute("cy", CENTER_Y);
+        circle.setAttribute("r", RADIUS);
+        circle.setAttribute("fill", "orange");
+        circle.setAttribute("stroke", "black");
+        circle.setAttribute("stroke-width", "2");
+        svg.appendChild(circle);
+
+        for (let i = 1; i <= 12; i++) {
+          const angle = (i / 12) * 2 * Math.PI - Math.PI / 2;
+          const x = CENTER_X + (RADIUS - 25) * Math.cos(angle);
+
+          const number = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "circle"
+          );
+          number.setAttribute("cx", x);
+          number.setAttribute("cy", y);
+          number.setAttribute("r", 15);
+          number.setAttribute("fill", "seagreen");
+          svg.appendChild(number);
+
+          const text = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "text"
+          );
+          text.setAttribute("x", x);
+          text.setAttribute("y", y + 5);
+          text.setAttribute("font-size", "12px");
+          text.setAttribute("text-anchor", "middle");
+          text.setAttribute("fill", "white");
+          text.textContent = i;
+          svg.appendChild(text);
+        }
+
+        const digitalClock = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text"
+        );
+        digitalClock.setAttribute("x", CENTER_X);
+        digitalClock.setAttribute("y", CENTER_Y - 40);
+        digitalClock.setAttribute("font-size", "24px");
+        digitalClock.setAttribute("text-anchor", "middle");
+        digitalClock.setAttribute("fill", "black");
+        svg.appendChild(digitalClock);
+
+        document.body.appendChild(svg);
+        return { svg, digitalClock };
+      }
+
+      function updateClock(clockElements) {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        clockElements.digitalClock.textContent = `${String(hours).padStart(
+          2,
+          "0"
+        )}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+          2,
+          "0"
+        )}`;
+
+        const secondAngle = (seconds / 60) * 360 - 90;
+        const minuteAngle = (minutes / 60) * 360 + (seconds / 60) * 6 - 90;
+        const hourAngle = ((hours % 12) / 12) * 360 + (minutes / 60) * 30 - 90;
+
+        const secondHand = drawHand(
+          CENTER_X,
+          CENTER_Y,
+          SECOND_LENGTH,
+          secondAngle,
+          "black"
+        );
+        const minuteHand = drawHand(
+          CENTER_X,
+          CENTER_Y,
+          MINUTE_LENGTH,
+          minuteAngle,
+          "black"
+        );
+        const hourHand = drawHand(
+          CENTER_X,
+          CENTER_Y,
+          HOUR_LENGTH,
+          hourAngle,
+          "black"
+        );
+
+        const lines = clockElements.svg.querySelectorAll("line");
+        lines.forEach((line) => line.remove());
+
+        clockElements.svg.appendChild(secondHand);
+        clockElements.svg.appendChild(minuteHand);
+        clockElements.svg.appendChild(hourHand);
+        clockElements.svg.appendChild(clockElements.digitalClock);
+      }
+
+      function drawHand(cx, cy, length, angle, color) {
+        const hand = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "line"
+        );
+        const radian = angle * (Math.PI / 180);
+        const x2 = cx + length * Math.cos(radian);
+        const y2 = cy + length * Math.sin(radian);
+        hand.setAttribute("x1", cx);
+        hand.setAttribute("y1", cy);
+        hand.setAttribute("x2", x2);
+        hand.setAttribute("y2", y2);
+        hand.setAttribute("stroke", color);
+        hand.setAttribute("stroke-width", 2.7);
+        return hand;
+      }
+
+      function initClock() {
+        const clockElements = createClock();
+        updateClock(clockElements);
+        setInterval(() => updateClock(clockElements), 1000);
+      }
+
+      initClock();
+    </script>
+  </body>
+</html>
