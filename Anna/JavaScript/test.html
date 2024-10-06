@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MVC example</title>
+  <style>
+    body {
+      font-size: 21px;
+      text-align: center;
+    }
+
+    input {
+      min-width: 180px;
+      padding: 8px 12px;
+      border: 1px gray solid;
+      border-radius: 3px;
+      margin: 0 5px;
+    }
+
+    select {
+      padding: 8px 12px;
+      border: 1px gray solid;
+      border-radius: 3px;
+      margin: 0 5px;
+    }
+
+    button {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Пример решения задачи через MVC</h1>
+
+  <h3>Калькулятор</h3>
+  <form>
+    <fieldset>
+      <legend>Магия чисел</legend>
+      <p>
+        <input type="number" placeholder="Введите первое значение" name="input_1" id="input_1">
+        <select name="operator" id="operator">
+          <option value="plus">+</option>
+          <option value="minus">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+        <input type="number" placeholder="Введите второе значение" name="input_2" id="input_2">
+      </p>
+      <p>
+        <button id="calculate-btn">Вычислить</button>
+      </p>
+      <div id="show-result"></div>
+    </fieldset>
+  </form>
+
+  <script>
+    /* Здесь пишем скрипт, который позволит решить поставленную задачу:
+        1) Кнопка "вычислить" должна быть не активна, пока не введены оба числа
+        2) Если введены оба числа (т.е. инпуты не пустые), то делаем кнопку активной
+        3) по клику на эту кнопку - произвести вычисление и вывод результата в div с id="show-result" в формате:
+        "Результат вычислений = " + результат
+    */
+
+    //model - основные вычисления данных, полученных из контроллера
+    const calculator = {
+      firstVal: null,
+      secondVal: null,
+      result: '',
+      //присвоение первого числа
+      setFirstVal: function (value) {
+        this.firstVal = value;
+      },
+      //присвоение второго числа числа
+      setSecondVal: function (value) {
+        this.secondVal = value;
+      },
+      //region функции подсчета результата
+      plus: function () {
+        this.result = this.firstVal + this.secondVal;
+        this.updateView();
+      },
+      minus: function () {
+        this.result = this.firstVal - this.secondVal;
+        this.updateView();
+      },
+      multiply: function () {
+        this.result = this.firstVal * this.secondVal;
+        this.updateView();
+      },
+      divide: function () {
+        if (this.secondVal === 0) {
+          this.result = 'На ноль делить нельзя';
+        } else {
+          this.result = this.firstVal / this.secondVal;
+        }
+        this.updateView();
+      },
+      //endregion
+      changeButtonState: function () {
+        webPageView.updateButtonDisability(typeof this.firstVal !== 'number' || typeof this.secondVal !== 'number'); //передаем true, если хотя бы в одном инпуте нет значения
+      },
+      updateView: function () {
+        webPageView.updateResult(this.result);
+      },
+    }
+
+    
+
+    //view - отображение изменений 
+    const webPageView = {
+      outputBlock: document.getElementById('show-result'), //элемент отображения результата
+      calcButton: document.getElementById('calculate-btn'), //элемент кнопки
+      updateResult: function (result) {
+        const resultPhrase = result || result === 0 ? `Результат вычислений = ${result}` : ''; //если есть результат, то записываем фразу в переменную
+        this.outputBlock.textContent = resultPhrase; //заменяем текст в элементе
+      },
+      updateButtonDisability: function (isDisabled) {
+        this.calcButton.disabled = isDisabled; //включение/отключение кнопки
+      }
+    }
+
+
+
+    //controller - обработка действий пользователя и передача информации в модель
+    const controller = {
+      operator: document.getElementById('operator'), //вынесли в отдельное свойство, чтобы не получать элемент при каждом клике на кнопку
+      //добавление обработчиков на изменение инпутов и нажатие кнопки
+      addListeners: function () {
+        calculator.changeButtonState(); //сразу делаем кнопку disabled, так как изначально данные не введены
+
+        //region вешаем обработчики 
+        const input1 = document.getElementById('input_1');
+        input1.addEventListener('input', this.inputHandler);
+
+        const input2 = document.getElementById('input_2');
+        input2.addEventListener('input', this.inputHandler);
+
+        const calcButton = document.getElementById('calculate-btn');
+        calcButton.addEventListener("click", this.buttonClickHandler.bind(this)); //вызов через bind, чтобы передать контекст this, для возможности использования this.operator, т.к. в функции обработчике контекст this перезаписывается
+        //endregion
+      },
+      //обаботчик для инпутов
+      inputHandler: function () {
+        const field = event.target; //получение измененного элемента
+        const fieldId = field.getAttribute("id");
+        const value = field.value !== "" ? Number(field.value) : null; //приведение введенных данных к числу, если строка не пустая, иначе null
+
+        if (fieldId === 'input_1') {
+          calculator.setFirstVal(value); //присваиваем firstVal объекту calculator
+        } else if (fieldId === 'input_2') {
+          calculator.setSecondVal(value); //присваиваем secondVal объекту calculator
+        }
+
+        calculator.changeButtonState();
+      },
+      buttonClickHandler: function () {
+        event.preventDefault(); //при нажатии на button, который находится внутри тегов <form> страница перезагружается. Чтобы этого избежать используем preventDefault
+
+        //вызов функций в зависимости от выбранного оператора
+        switch (this.operator.value) {
+          case 'plus':
+            calculator.plus();
+            break;
+          case 'minus':
+            calculator.minus();
+            break;
+          case 'multiply':
+            calculator.multiply();
+            break;
+          case 'divide':
+            calculator.divide();
+            break;
+        }
+      }
+    }
+
+    controller.addListeners(); //Стартовая точка
+  </script>
+</body>
+
+</html>

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .video{width:580px; height:920px;overflow: scroll;}
-        a[href^='https://']{margin-bottom: 10px;}
-    </style>
-    <title>Video</title>
-</head>
-<body>
-    <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/2pLT-olgUJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-        <a href="https://www.youtube.com/embed/2pLT-olgUJs" target="_blank">Смотреть в отдельном окне</a><br><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HhdYlniTjvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-        <a href="https://www.youtube.com/embed/HhdYlniTjvg" target="_blank">Смотреть в отдельном окне</a><br><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oAPCPjnU1wA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-        <a href="https://www.youtube.com/embed/oAPCPjnU1wA" target="_blank">Смотреть в отдельном окне</a><br><br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/M0uO8X3_tEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
-        <a href="https://www.youtube.com/embed/M0uO8X3_tEA" target="_blank">Смотреть в отдельном окне</a>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="hangman.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Hangman</h1>
+      <p>Use the alphabet below to guess the word. </p>
     </div>
-    </body>
+    <div class="wrapper">
+      <div id="buttons">
+      </div>
+      <div id="hold">
+      </div>
+      <p id="mylives"></p>
+      <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+      <div class="container">
+        <button id="reset">Play again</button>
+      </div>
+    </div>
+    <script src='hangman.js'></script>
+  </body>
 </html>

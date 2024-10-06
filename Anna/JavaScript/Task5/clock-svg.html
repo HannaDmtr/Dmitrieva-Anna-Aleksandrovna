@@ -49,6 +49,7 @@
         for (let i = 1; i <= 12; i++) {
           const angle = (i / 12) * 2 * Math.PI - Math.PI / 2;
           const x = CENTER_X + (RADIUS - 25) * Math.cos(angle);
+          const y = CENTER_Y + (RADIUS - 25) * Math.sin(angle);
 
           const number = document.createElementNS(
             "http://www.w3.org/2000/svg",

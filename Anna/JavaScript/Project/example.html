@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пазлы из изображения</title>
+    <style>
+        canvas {
+            border: 1px solid black; 
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="upload" accept="image/*">
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const upload = document.getElementById('upload');
+
+        let image = new Image();
+        let canvasWidth, canvasHeight;
+        const rows = 4; // Количество строк
+        const cols = 4; // Количество столбцов
+        let pieces = [];
+        let isDragging = false;
+        let draggedPieceIndex = null;
+        let offsetX, offsetY;
+
+        upload.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                image.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        image.onload = () => {
+            // Устанавливаем максимальные размеры canvas
+            canvasWidth = Math.min(window.innerWidth, image.width);
+            canvasHeight = Math.min(window.innerHeight, image.height);
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+
+            // Изменяем размер изображения в соответствии с канвасом
+            const aspectRatio = image.width / image.height;
+            let newWidth, newHeight;
+            if (canvasWidth / canvasHeight > aspectRatio) {
+                newHeight = canvasHeight;
+                newWidth = canvasHeight * aspectRatio;
+            } else {
+                newWidth = canvasWidth;
+                newHeight = canvasWidth / aspectRatio;
+            }
+
+            // Рассчитываем размеры кусочков
+            const pieceWidth = newWidth / cols;
+            const pieceHeight = newHeight / rows;
+
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    let canvasPiece = document.createElement('canvas');
+                    canvasPiece.width = pieceWidth;
+                    canvasPiece.height = pieceHeight;
+                    const pieceCtx = canvasPiece.getContext('2d');
+
+                    // Копируем изображение на куски
+                    pieceCtx.drawImage(
+                        image,
+                        col * pieceWidth * (image.width / newWidth),
+                        row * pieceHeight * (image.height / newHeight),
+                        pieceWidth * (image.width / newWidth),
+                        pieceHeight * (image.height / newHeight),
+                        0,
+                        0,
+                        pieceWidth,
+                        pieceHeight
+                    );
+
+                    pieces.push({
+                        canvas: canvasPiece,
+                        x: col * pieceWidth,
+                        y: row * pieceHeight,
+                        correctX: col * pieceWidth,
+                        correctY: row * pieceHeight,
+                        index: row * cols + col
+                    });
+                }
+            }
+
+            pieces = shuffleArray(pieces);
+            drawPieces();
+        };
+
+        function shuffleArray(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function drawPieces() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            pieces.forEach(piece => {
+                ctx.drawImage(piece.canvas, piece.x, piece.y);
+            });
+        }
+
+        canvas.addEventListener('mousedown', (event) => {
+            const mousePos = getMousePos(canvas, event);
+            pieces.forEach((piece, index) => {
+                if (mousePos.x >= piece.x && mousePos.x <= piece.x + piece.canvas.width &&
+                    mousePos.y >= piece.y && mousePos.y <= piece.y + piece.canvas.height) {
+                    isDragging = true;
+                    draggedPieceIndex = index;
+                    offsetX = mousePos.x - piece.x;
+                    offsetY = mousePos.y - piece.y;
+                }
+            });
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDragging = false;
+
+            if (draggedPieceIndex !== null) {
+                const piece = pieces[draggedPieceIndex];
+
+                // Проверяем, правильно ли место
+                const threshold = 20; // Порог для "правильного" места
+                if (Math.abs(piece.x - piece.correctX) < threshold && Math.abs(piece.y - piece.correctY) < threshold) {
+                    piece.x = piece.correctX;
+                    piece.y = piece.correctY;
+                }
+
+                // Проверяем, собран ли пазл
+                if (isPuzzleSolved()) {
+                    alert('Вы собрали пазл!');
+                }
+            }
+            draggedPieceIndex = null;
+        });
+
+        canvas.addEventListener('mousemove', (event) => {
+            if (isDragging && draggedPieceIndex !== null) {
+                const mousePos = getMousePos(canvas, event);
+                const piece = pieces[draggedPieceIndex];
+
+                piece.x = mousePos.x - offsetX;
+                piece.y = mousePos.y - offsetY;
+
+                drawPieces();
+            }
+        });
+
+        function getMousePos(canvas, event) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top
+            };
+        }
+
+        function isPuzzleSolved() {
+            return pieces.every(piece =>
+                piece.x === piece.correctX && piece.y === piece.correctY
+            );
+        }
+    </script>
+</body>
+</html>

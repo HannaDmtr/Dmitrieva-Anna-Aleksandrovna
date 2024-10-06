@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Часы на Canvas</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      canvas {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="clock" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById("clock");
+      const ctx = canvas.getContext("2d");
+      const radius = (canvas.height / 2) * 0.9;
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const digitOffset = 0.85;
+
+      function drawClock() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+        ctx.fillStyle = "orange";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        ctx.fillStyle = "black";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        for (let i = 1; i <= 12; i++) {
+          let angle = (i * Math.PI) / 6;
+          let xOuter = centerX + radius * digitOffset * Math.sin(angle);
+          let yOuter = centerY - radius * digitOffset * Math.cos(angle);
+
+          ctx.beginPath();
+          ctx.arc(xOuter, yOuter, 20, 0, Math.PI * 2);
+          ctx.fillStyle = "SeaGreen";
+          ctx.fill();
+          ctx.strokeStyle = "black";
+
+          ctx.fillStyle = "black";
+          ctx.font = "bold 16px Arial";
+          ctx.fillText(i.toString(), xOuter, yOuter);
+        }
+
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        ctx.fillStyle = "black";
+        ctx.font = "24px Arial";
+        ctx.fillText(
+          `${String(hours).padStart(2, "0")}:${String(minutes).padStart(
+            2,
+            "0"
+          )}:${String(seconds).padStart(2, "0")}`,
+          centerX,
+          centerY - 80
+        ); // Опустили центр по Y на 20 пикселей
+
+        drawHand((hours % 12) * 30 + minutes * 0.5, radius * 0.5, 8, "black");
+        drawHand(minutes * 6 + seconds * 0.1, radius * 0.7, 5, "black");
+        drawHand(seconds * 6, radius * 0.9, 2, "black");
+      }
+
+      function drawHand(degrees, length, width, color = "black") {
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        ctx.rotate((degrees * Math.PI) / 180);
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, -length);
+        ctx.lineWidth = width;
+        ctx.strokeStyle = color;
+
+        ctx.lineCap = "round";
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      setInterval(drawClock, 1000);
+      drawClock();
+    </script>
+  </body>
+</html>
